@@ -3,7 +3,9 @@
 logo
 !(main/4us%20logojpg_Mesa%20de%20trabajo%201.jpg)
 
-## ¿que es 4us? guyot
+## ¿que es 4us? 
+Es un cesto de residuos reciclables inteligente, el cual, de una forma dicertida y amigable va a inculcar la importancua del reciclaje en nuestra vida diaria a los mas chicos. 
+
 
 ## ¿Como funciona? marian
 
