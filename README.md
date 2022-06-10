@@ -1,7 +1,7 @@
 
 
 logo
-!(https://github.com/impatrq/4us/blob/main/4us%20logojpg_Mesa%20de%20trabajo%201.jpgmain/4us%20logojpg_Mesa%20de%20trabajo%201.jpg)
+!(./logojpg_Mesa de trabajo 1.jpg)
 
 # 4us, el tacho de reciclaje inteligente 
 
