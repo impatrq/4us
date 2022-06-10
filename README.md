@@ -11,7 +11,7 @@ logo
 
 ## ¿donde utilizarlo? dego
 
-## ¿por que utilizarlo? cele
+## ¿por que utilizarlo?
 
 ## Integrantes pier
 
