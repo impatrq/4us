@@ -5,6 +5,9 @@ logo
 
 #### 4us busca, a traves de su diseño innovador inculcar el reciclaje a los más chicos de manera divertida y asi disminuir la cantidad de basura que se genera por día en nuestro país
 
+## ¿Como funciona?
+
+
 ## Integrantes
 
 #### Aranda Federico
