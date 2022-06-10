@@ -12,6 +12,7 @@ logo
 ## ¿donde utilizarlo? dego
 
 ## ¿por que utilizarlo?
+### 4us es un proyecto diseñado para ayudar al medio ambiente a traves del reciclaje. El objetivo es inculcarles a los chicos que el reciclaje es muy importante en nuestra vida diaria y lo importante que es cuidar el medio ambiente porque de ello depende nuestra salud y nuestra vida. 
 
 ## Integrantes pier
 
