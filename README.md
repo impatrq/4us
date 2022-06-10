@@ -3,22 +3,44 @@
 logo
 !(main/4us%20logojpg_Mesa%20de%20trabajo%201.jpg)
 
-# 4us, el tacho de reciclaje inteligente 
+## ¿que es 4us? guyot
 
-#### 4us busca, a traves de su diseño innovador inculcar el reciclaje a los más chicos de manera divertida y asi disminuir la cantidad de basura que se genera por día en nuestro país
+## ¿Como funciona? marian
 
-## ¿Como funciona?
+## ¿quienes lo desarrollan? litio
 
+## ¿donde utilizarlo? dego
 
-## Integrantes
+## ¿por que utilizarlo? cele
+
+## Integrantes pier
 
 #### Aranda Federico
-#### Dalle Nogare Pierluigi
-#### De Godoy Máximo
-#### González Mariano
-#### Guyot Ivan
-#### Litteri Santiago
-#### Martinez Celeste
-#### Romero Camila
+#### instagram y mail
 
-# titulo lista integrantes
+#### Dalle Nogare Pierluigi
+#### instagram y mail
+
+#### De Godoy Máximo
+#### instagram y mail
+
+#### González Mariano
+#### instagram y mail
+
+#### Guyot Ivan
+#### instagram y mail
+
+#### Litteri Santiago
+#### instagram y mail
+
+#### Martinez Celeste
+#### instagram y mail
+
+#### Romero Camila
+#### instagram y mail
+
+## ¿como contactarnos? fede
+
+## titulo lista integrantes 
+
+## esponsor cami
