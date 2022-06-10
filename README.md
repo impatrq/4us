@@ -15,7 +15,8 @@ Es un cesto de residuos reciclables inteligente, el cual, de una forma dicertida
 
 ## 4US se usara en escuelas y hospitales donde la creatividad y el aprendizaje de los niños y niñas abunda. Tambien, por su sistema de deteccion de residuos, puede ser usado en aeropuertos, fabricas, oficinas, etc.
 
-## ¿por que utilizarlo? cele
+## ¿por que utilizarlo?
+### 4us es un proyecto diseñado para ayudar al medio ambiente a traves del reciclaje. El objetivo es inculcarles a los chicos que el reciclaje es muy importante en nuestra vida diaria y lo importante que es cuidar el medio ambiente porque de ello depende nuestra salud y nuestra vida. 
 
 ## Integrantes pier
 
