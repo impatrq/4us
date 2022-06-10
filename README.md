@@ -7,7 +7,8 @@ logo
 
 ## ¿Como funciona? marian
 
-## ¿quienes lo desarrollan? litio
+## ¿quienes lo desarrollan? 
+ Somos alumnos de la Escuela de Educacion Secundaria Tecnica N°7 (TRQ)(IMPA) entusiasmados por el reciclaje y el aumentar la visibilidad de este.
 
 ## ¿donde utilizarlo? dego
 
