@@ -3,9 +3,9 @@ logo
 
 # 4us, el tacho de reciclaje inteligente 
 
-## 4us busca, a traves
+### 4us busca, a traves de su diseño innovador 
 
-# quienes
+## Integrantes
 
 # por que usarlo
 
