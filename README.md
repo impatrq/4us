@@ -9,7 +9,9 @@ logo
 
 ## ¿quienes lo desarrollan? litio
 
-## ¿donde utilizarlo? dego
+## ¿donde utilizarlo?
+
+## 4US se usara en escuelas y hospitales donde la creatividad y el aprendizaje de los niños y niñas abunda. Tambien, por su sistema de deteccion de residuos, puede ser usado en aeropuertos, fabricas, oficinas, etc.
 
 ## ¿por que utilizarlo? cele
 
