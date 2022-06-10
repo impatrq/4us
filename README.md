@@ -7,7 +7,8 @@ logo
 
 ## ¿Como funciona?
 
-
+Foto de nuestro sponsor Electrocomponentes
+!(link de la imagen)
 ## Integrantes
 
 #### Aranda Federico
