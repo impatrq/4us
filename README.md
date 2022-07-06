@@ -23,28 +23,36 @@ El proyecto funcionará de la siguiente manera: podrá separar tanto madera y de
 ## Integrantes pier
 
 #### Aranda Federico
-#### instagram y mail
+#### @fedearanda_04
+#### federiconehuenaranda@impatrq.com
 
 #### Dalle Nogare Pierluigi
-#### instagram y mail
+#### @pierelcapo
+#### pierluigidallenogare@impatrq.com
 
 #### De Godoy Máximo
-#### instagram y mail
+#### @maxidg01
+#### maximodegodoy@impatrq.com
 
 #### González Mariano
-#### instagram y mail
+#### @mariano_.gonzalez
+#### marianoivangonzalez@impatrq.com
 
 #### Guyot Ivan
-#### instagram y mail
+#### @guyotivan
+#### ivanjavierguyot@impatrq.com
 
 #### Litteri Santiago
-#### instagram y mail
+#### @santitteri
+#### santiagolitteri@impatrq.com
 
 #### Martinez Celeste
-#### instagram y mail
+#### @celees.mr
+#### celestemartinezrevelli@impatrq.com
 
 #### Romero Camila
-#### instagram y mail
+#### @caamii.romero
+#### camilalisetteromero@impatrq.com
 
 ## ¿como contactarnos? fede
 
