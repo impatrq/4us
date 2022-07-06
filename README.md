@@ -4,55 +4,54 @@
 #### 4us busca, a traves de su diseño innovador inculcar el reciclaje a los más chicos de manera divertida y asi disminuir la cantidad de basura que se genera por día en nuestro país
 
 ## ¿que es 4us? 
-Es un cesto de residuos reciclables inteligente, el cual, de una forma dicertida y amigable va a inculcar la importancua del reciclaje en nuestra vida diaria a los mas chicos. 
+## Es un cesto de residuos reciclables inteligente, el cual, de una forma dicertida y amigable va a inculcar la importancua del reciclaje en nuestra vida diaria a los mas chicos. 
 
 ## ¿Como funciona? marian
 
 ## ¿Como funciona?
-El proyecto funcionará de la siguiente manera: podrá separar tanto madera y derivados, como plasticos o metales. El niño que utilice 4us colocará la basura en el tacho, indicando la clasificacion de la basura. Esto lo conseguirá pulsando uno de los tres botones disponibles,(cada uno correspondiendo a los tres tipos de resiuduos antes nombrados). Dicho residuo será sensado y confirmará si corresponde con la categoria que marcó el niño. Si coincide, irá a su contenedor correspondiente de forma automática; de lo contrario, será devuelto al usuario.
+## El proyecto funcionará de la siguiente manera: podrá separar tanto madera y derivados, como plasticos o metales. El niño que utilice 4us colocará la basura en el tacho, indicando la clasificacion de la basura. Esto lo conseguirá pulsando uno de los tres botones disponibles,(cada uno correspondiendo a los tres tipos de resiuduos antes nombrados). Dicho residuo será sensado y confirmará si corresponde con la categoria que marcó el niño. Si coincide, irá a su contenedor correspondiente de forma automática; de lo contrario, será devuelto al usuario.
 
-## ¿quienes lo desarrollan? litio
+## ¿quienes lo desarrollan?
+## Somos un grupo de estudiantes de la escuela tecnica N°7 (IMPA) orientados en la electronica interesados en el reciclaje y en la visibilidad de este.
 
 ## ¿donde utilizarlo?
-
 ## 4US se usara en escuelas y hospitales donde la creatividad y el aprendizaje de los niños y niñas abunda. Tambien, por su sistema de deteccion de residuos, puede ser usado en aeropuertos, fabricas, oficinas, etc.
 
 ## ¿por que utilizarlo?
 ### 4us es un proyecto diseñado para ayudar al medio ambiente a traves del reciclaje. El objetivo es inculcarles a los chicos que el reciclaje es muy importante en nuestra vida diaria y lo importante que es cuidar el medio ambiente porque de ello depende nuestra salud y nuestra vida. 
 
-## Integrantes pier
+## Integrantes:
+#### Aranda Federico:
+#### Instagram: @fedearanda_04
+#### Mail: federiconehuenaranda@impatrq.com
 
-#### Aranda Federico
-#### @fedearanda_04
-#### federiconehuenaranda@impatrq.com
+#### Dalle Nogare Pierluigi:
+#### Instagram: @pierelcapo
+#### Mail: pierluigidallenogare@impatrq.com
 
-#### Dalle Nogare Pierluigi
-#### @pierelcapo
-#### pierluigidallenogare@impatrq.com
+#### De Godoy Máximo:
+#### Instagram: @maxidg01
+#### Mail: maximodegodoy@impatrq.com
 
-#### De Godoy Máximo
-#### @maxidg01
-#### maximodegodoy@impatrq.com
+#### González Mariano:
+#### Instagram: @mariano_.gonzalez
+#### Mail: marianoivangonzalez@impatrq.com
 
-#### González Mariano
-#### @mariano_.gonzalez
-#### marianoivangonzalez@impatrq.com
+#### Guyot Ivan:
+#### Instagram: @guyotivan
+#### Mail: ivanjavierguyot@impatrq.com
 
-#### Guyot Ivan
-#### @guyotivan
-#### ivanjavierguyot@impatrq.com
+#### Litteri Santiago:
+#### Instagram: @santitteri
+#### Mail: santiagolitteri@impatrq.com
 
-#### Litteri Santiago
-#### @santitteri
-#### santiagolitteri@impatrq.com
+#### Martinez Celeste:
+#### Instagram: @celees.mr
+#### Mail: celestemartinezrevelli@impatrq.com
 
-#### Martinez Celeste
-#### @celees.mr
-#### celestemartinezrevelli@impatrq.com
-
-#### Romero Camila
-#### @caamii.romero
-#### camilalisetteromero@impatrq.com
+#### Romero Camila:
+#### Instagram: @caamii.romero
+#### Mail: camilalisetteromero@impatrq.com
 
 ## ¿como contactarnos? fede
 
