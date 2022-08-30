@@ -4,7 +4,10 @@ import matplotlib.pyplot as plt
 import matplotlib
 import pyaudio as pa 
 import struct
+from time import sleep
 matplotlib.use('TkAgg')
+
+delay = 5
 
 FRAMES = 1024*8                                   # Tamaño del paquete a procesar
 FORMAT = pa.paInt16                               # Formato de lectura INT 16 bits
@@ -29,3 +32,20 @@ while True:
     Posm = np.where(M_gk == np.max(M_gk))[0][0]           # Encontramos la posición para la cual la Magnitud de FFT es máxim
     F_fund = F[Posm]
     print(F_fund)
+    #### Aplicar threading para que continue el calculo de fundamentales al mismo tiempor que se asignan dentro de la lista
+    def freqasign(delay):    
+        newfreq = [F_fund]
+        for a in range(delay):
+            print ("...")
+            newfreq = newfreq+[F_fund]
+            sleep(1)
+        print("freq asignadas, calculando datos importantes....")
+        pass
+        print(newfreq)
+        print("accion completada con exito")
+    #freqasign(int(input("delay? : ")))
+    # if ent == "asignar":
+    #     newfreq = [F_fund]
+    #     newfreq = newfreq + [F_fund]
+    #     sleep(5)
+    #     print ("nueva asignacion,    :",newfreq)

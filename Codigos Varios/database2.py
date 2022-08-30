@@ -38,3 +38,6 @@ print("Base de datos hasta el momento :    ",database)
 # datos = [{"tipo":"sucutrulo", "freqmic":7777, "freqcap":7777, "valamp":7777}]
 # database = database + datos
 # print("2 : ",database)
+def lectora():
+    # terminar lectora (borrar pass por si alguien mas lo revisa, jajjaja que iluso)
+    pass
