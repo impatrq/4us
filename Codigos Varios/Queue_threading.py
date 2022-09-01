@@ -13,19 +13,18 @@ from time import sleep
 
 matplotlib.use('TkAgg')
 
-delay = 5
 
 FRAMES = 1024*8                                   # Tamaño del paquete a procesar
 FORMAT = pa.paInt16                               # Formato de lectura INT 16 bits
 CHANNELS = 1
 Fs = 44100                                        # Frecuencia de muestreo típica para audio
-
-cola = queue.Queue()
+# creo una queue de tipo last in first out
+cola = queue.LifoQueue()
 
 p = pa.PyAudio()
 
-
-def calculadorafft():
+#funcion de calculos fft (magnitud de frecuencia y amplitud)
+def calculadorafft(cola):
     stream = p.open(                                  # Abrimos el canal de audio con los parámeteros de configuración
     format = FORMAT,
     channels = CHANNELS,
@@ -44,24 +43,30 @@ def calculadorafft():
         #agrego data a la cola
         cola.put(F_fund)
         print(F_fund)
-        return(F_fund)
-
-#### Aplicar threading para que continue el calculo de fundamentales al mismo tiempor que se asignan dentro de la lista
-def freqasign(delay):    
-    queuedata = cola.get()
-    newfreq = [queuedata]
-    for a in range(delay):
-        print ("...")
-        newfreq = newfreq+[queuedata]
-        sleep(1)
+# funcion de recoleccion de informacion de frecuencias de sonido
+def freqasign(delayint,cola):
+    sleep(delayint)
+    # Funcion que se encarga de eliminar la informacion erronea del mic al inciar
+    basura = [cola.get()]
+    for a in range(5):
+        basura = basura + [cola.get()]
+    ##############################################################################
+    newfreq = [cola.get()]
+    for a in range(delayint):
+        #retira inf. de la cola (pero la ultima inf. que se agrego porque es una cola de tipo lifo)
+        data = cola.get()
+        print("...")
+        newfreq = newfreq + [data]    
     print("freq asignadas, calculando datos importantes....")
     pass
     print(newfreq)
     print("accion completada con exito")
 delayint=int(input("Delay__?:  "))
 print(delayint)
-fft_c = threading.Thread(target=calculadorafft)
-asignar = threading.Thread(target=freqasign, args=(delayint,))
+# Designa los diferentes threads
+fft_c = threading.Thread(target=calculadorafft, args=(cola,))
+asignar = threading.Thread(target=freqasign, args=(delayint,cola,))
+# inicia los threads
 fft_c.start()
 asignar.start()
 
