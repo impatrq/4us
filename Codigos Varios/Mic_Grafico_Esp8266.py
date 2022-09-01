@@ -11,40 +11,40 @@
 ########################################################################
 
 
-from machine import Pin, I2C, ADC # Importa las librerias nesesarias para usar los pines gipo(general purpuose input output.. se explica solo), I2c para el oled, y Adc para convertir la entrada analogica del micro en digital
+from #machine import Pin, I2C, ADC # Importa las librerias nesesarias para usar los pines gipo(general purpuose input output.. se explica solo), I2c para el oled, y Adc para convertir la entrada analogica del micro en digital
 from time import sleep # importa algo parecido a un "delay" de arduino
-import ssd1306 #libreria que controla las direcciones de i2c para el oled
+import #ssd1306 #libreria que controla las direcciones de i2c para el oled
 import time
 
-led = Pin(16, Pin.OUT) #declara una salida gpio como output, no se usa actualmente
+#led = Pin(16, Pin.OUT) #declara una salida gpio como output, no se usa actualmente
 uno = 0
 dos = 0
 tiempo = 0
 
 # using default address 0x3C     #Cosas nesesarias del oled, declara pines, resolucion y protocolo de com
-i2c = I2C(sda=Pin(4), scl=Pin(5))
-display = ssd1306.SSD1306_I2C(128, 64, i2c)
+#i2c = I2C(sda=Pin(4), scl=Pin(5))
+#display = ssd1306.SSD1306_I2C(128, 64, i2c)
 
 # config del adc del micro
-mic = ADC(0) 
+#mic = ADC(0) 
 #declara la variable mic como la entrada de adc en el pin 0
 
 while True: #Loop que grafica
     tiempo = tiempo + 1 #una variable contador que va aumentando su valor periodicamente
     if tiempo >= 120: #reseteo la variable para que no tenga un valor mayor a la resolucion del oled
         tiempo = 0 
-        display.fill(0) #pongo el oled en negro
-    algo = int(mic.read()/10)#lee la entrada de adc, la divide por 10, y lo conviente en un int
+        #display.fill(0) #pongo el oled en negro
+    #algo = int(mic.read()/10)#lee la entrada de adc, la divide por 10, y lo conviente en un int
  #Mas adelante uso "algo" como una coordenada a graficar, por eso no puede tener coma y es un int
 
-    print(algo) #comprobacion por computadora de que funciona
-    display.text("Entrada de Mic",0,0,1)
-    display.fill_rect(1,16,1,48,7) # dibuja las lineas del grafico, son coordenadas cartesianas
-    display.fill_rect(2,62,120,2,2)
-    display.fill_rect(tiempo,algo,1,1,1) # Usa "tiempo" como x y "algo" como y
+    #print(algo) #comprobacion por computadora de que funciona
+    #display.text("Entrada de Mic",0,0,1)
+    #display.fill_rect(1,16,1,48,7) # dibuja las lineas del grafico, son coordenadas cartesianas
+    #display.fill_rect(2,62,120,2,2)
+    #display.fill_rect(tiempo,algo,1,1,1) # Usa "tiempo" como x y "algo" como y
     # Como "tiempo" va incrementando, el grafico se mueve y "algo" oscila en y
     sleep(.01)
-    display.show() # Muestra todos los comandos de arriba en el oled, sin eso no muestra nada
+    #display.show() # Muestra todos los comandos de arriba en el oled, sin eso no muestra nada
 
 
     ######################################################################
