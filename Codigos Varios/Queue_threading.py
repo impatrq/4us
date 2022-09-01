@@ -41,23 +41,29 @@ def calculadorafft():
         M_gk = abs(fourier.fft(dataInt)/FRAMES)
         Posm = np.where(M_gk == np.max(M_gk))[0][0]           # Encontramos la posición para la cual la Magnitud de FFT es máxim
         F_fund = F[Posm]
+        #agrego data a la cola
+        cola.put(F_fund)
         print(F_fund)
         return(F_fund)
 
 #### Aplicar threading para que continue el calculo de fundamentales al mismo tiempor que se asignan dentro de la lista
-def freqasign(delay,F_fund):    
-    newfreq = [F_fund]
+def freqasign(delay):    
+    queuedata = cola.get()
+    newfreq = [queuedata]
     for a in range(delay):
         print ("...")
-        newfreq = newfreq+[F_fund]
+        newfreq = newfreq+[queuedata]
         sleep(1)
     print("freq asignadas, calculando datos importantes....")
     pass
     print(newfreq)
     print("accion completada con exito")
 delayint=int(input("Delay__?:  "))
+print(delayint)
 fft_c = threading.Thread(target=calculadorafft)
-asignar = threading.Thread(target=freqasign, args=(delay,F_fund))
+asignar = threading.Thread(target=freqasign, args=(delayint,))
+fft_c.start()
+asignar.start()
 
 
 
