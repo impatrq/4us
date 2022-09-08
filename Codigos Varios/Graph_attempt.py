@@ -1,6 +1,7 @@
 #################################################################################################################
 
-#                   Version a terminar // implementacion de base de datos csv // 
+#                   Clon del main V4 //[ WIP ]// Implementacion de las condiciones de
+#                              deteccion de materiales // Refactor del codigo
 
 ##############################################################################################################
 
@@ -32,8 +33,17 @@ def creadora(): #1
     freqmic=newfreq
     freqcap=capacitivo
     valamp = amplitud
+    dataInt = struct.unpack(str(FRAMES) + 'h', data)
+    gk = fourier.fft(dataInt)
+    Ma_gk = abs(gk)  
     print("Valores asignados, clase creada ")
     print(nombre,freqmic,freqcap,valamp)
+    Fua = Fs+np.arange(0,len(newfreq))/len(newfreq)
+    plt.plot(F, Ma_gk)
+    plt.xlabel('Frecuencia (Hz)', fontsize='14')
+    plt.ylabel('Amplitud FFT', fontsize='14')
+    plt.show()
+    
     return(nombre,freqmic,freqcap,valamp)
 ##### Funcion asignadora: guarda los datos en el diccionario de forma ordenada ####
 def asignadora():#2
@@ -42,7 +52,7 @@ def asignadora():#2
 ##### Funcion almacenadora: Guarda los datos del diccionario en el csv para formar la base de datos ####
 def almacenadora():#3
     try:
-        with open(csv_file,"a") as file:
+        with open(csv_file,"w") as file:
             writer = csv.DictWriter(file, fieldnames = indices)
             writer.writeheader()
             for data in database:
@@ -69,9 +79,14 @@ def calculadorafft(cola):
     frames_per_buffer=FRAMES
     )
     while True:
+        global F
         F = (Fs/FRAMES)*np.arange(0,FRAMES//2)                 # Creamos el vector de frecuencia para encontrar la frecuencia dominante
+        global data
         data = stream.read(FRAMES)
         dataInt = struct.unpack(str(FRAMES) + 'h', data)
+        gk = fourier.fft(dataInt)
+        Fua = Fs+np.arange(0,len(dataInt))/len(dataInt)
+        global M_gk
         M_gk = abs(fourier.fft(dataInt)/FRAMES)
         Posm = np.where(M_gk == np.max(M_gk))[0][0]           # Encontramos la posición para la cual la Magnitud de FFT es máxim
         F_fund = F[Posm]
