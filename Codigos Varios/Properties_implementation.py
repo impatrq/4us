@@ -40,37 +40,19 @@ def lectora():
             print("final de lista")
             print("tipos de materiales: ",tmateriales)
         return tmateriales
-def lectora_de_datos(preg):
+def lectora_de_datos(nombre):
+    print("pregunta vale: ",nombre)
     with open(csv_file, newline="") as File:
         print("inicio de lectura especifica")
-        lectura = csv.reader(File)
+        lectura=list(csv.reader(File))
         for row in lectura:
-            if row[0] == preg:
+            print("pain",row[0])
+            print("pain2",nombre)
+            if row[0] == nombre:
+                print("esta :",row[0])
                 return row
             else: pass
 
-
-# def creadora(tlista): #1
-#     print(tlista)
-#     global freqmic,freqcap,valamp,nombre
-#     nombre=str(input("Nombre del material a cargar? :  "))
-#     if nombre in tlista:
-#         while True:
-#             preg = input("El material ya existe, asignar nuevos valores? : (S/N)")
-#             preg.lower()
-#             if preg == "s":
-#                 #leer valores existentes y promediar
-#                 freqmic = newfreq
-#                 freqcap = capacitivo
-#                 valamp = amplitud
-#                 break
-#             if preg == "n":
-#                 print("Accion rechazada.. ")
-#                 break
-#             else:
-#                 print("Entrada no valida ")
-#     print("Valores asignados, clase creada ")
-    #return(nombre,freqmic,freqcap,valamp)
 ##### Funcion asignadora: guarda los datos en el diccionario de forma ordenada ####
 def asignadora():#2
     global database
@@ -141,8 +123,9 @@ def creadora(tlista): #1
             preg = input("El material ya existe, asignar nuevos valores? : (S/N)")
             preg.lower()
             if preg == "s":
-                lecesp = lectora_de_datos(preg)
-                freqmic2 = (lecesp[1] + newfreq)
+                lecesp = lectora_de_datos(nombre)
+                #freqmic2 = (lecesp[1] + newfreq)
+                print(lecesp)
                 print("intento de valores promediados")
                 freqmic = newfreq
                 freqcap = capacitivo
