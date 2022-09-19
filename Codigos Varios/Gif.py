@@ -1,19 +1,32 @@
 from PySide6.QtWidgets import QApplication, QWidget, QLabel
-from PySide6.QtGui import QIcon, QMovie
-import sys
+from PySide6.QtGui import QMovie
+from time import sleep
+import threading
 
-class Window (QWidget):
-    def __init__(self):
+class GifPlayer (QWidget):
+    def __init__(self,GIF):
         super().__init__()
-
-        self.setGeometry(600,300,125,105)
+        self.setGeometry(-1,-1,1800,1200)
 
         label = QLabel(self)
-        movie = QMovie('cul.gif')
+        movie = QMovie(GIF) #tamaño correcto de gif -> 1280 x 720
         label.setMovie(movie)
         movie.start()
 
-app = QApplication([])
-window = Window()
-window.show()
-sys.exit(app.exec())
+def gif_closer(time, app, gif_player):
+    sleep(time)
+    gif_player.hide()
+    return app.quit()
+
+
+GIF_LIST = ['big.gif','city.gif','car.gif']
+
+APP = QApplication([])
+gif_players = [GifPlayer(GIF) for GIF in GIF_LIST]
+
+for gif_player in gif_players:
+    gif_player.show()
+    gif_end = threading.Thread(target = gif_closer, args = [2, APP, gif_player])
+    gif_end.start()
+    APP.exec()
+    gif_end.join()
