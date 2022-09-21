@@ -13,7 +13,15 @@ class GifPlayer (QWidget):
         label.setMovie(movie)
         movie.start()
 
-def gif_closer(time, app, gif_player):
+def gif_closer(time: int, app: QApplication, gif_player: GifPlayer) -> None:
+    """
+    --Description--
+
+    Params:
+        time: delay time in seconds
+        app: QApplication instance
+        gif_player: GifPlayer instance
+    """
     sleep(time)
     gif_player.hide()
     return app.quit()
