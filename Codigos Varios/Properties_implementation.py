@@ -41,18 +41,30 @@ def lectora():
             print("tipos de materiales: ",tmateriales)
         return tmateriales
 def lectora_de_datos(nombre):
-    print("pregunta vale: ",nombre)
     with open(csv_file, newline="") as File:
-        print("inicio de lectura especifica")
         lectura=list(csv.reader(File))
         for row in lectura:
-            print("pain",row[0])
-            print("pain2",nombre)
+            print("...")
             if row[0] == nombre:
                 print("esta :",row[0])
                 return row
             else: pass
 
+def recalculadora(row2):
+    with open(csv_file, newline="") as File:
+        lectura = csv.reader(File)
+        csvdata = []
+        for row in lectura:
+            print("...")
+            if row[0] == nombre:
+                recalc = row
+            else:
+                print(row[0])
+                csvdata.append(row)
+        #### Pensar bien el algoritmo que elimina la basura
+        finrecalc = newfreq + recalc
+        len(recalc)
+        for a in range(len(recalc[1])):
 ##### Funcion asignadora: guarda los datos en el diccionario de forma ordenada ####
 def asignadora():#2
     global database
@@ -67,7 +79,7 @@ def almacenadora():#3
                 writer.writerow(data)
                 print("data guardada")
     except IOError:
-        print("I/O error")
+        print("Error al abrir.... X ")
 ###### Funcion lectora: Lee los datos directo de la base de datos
 #funcion de calculos fft (magnitud de frecuencia y amplitud)
 def calculadorafft(cola):
@@ -103,6 +115,7 @@ def freqasign(delayint,cola):
         #retira inf. de la cola (pero la ultima inf. que se agrego porque es una cola de tipo lifo)
         data = cola.get()
         print("...")
+        global newfreq
         newfreq = newfreq + [data]    
     print("freq asignadas, calculando datos importantes....")
     pass
@@ -126,7 +139,7 @@ def creadora(tlista): #1
                 lecesp = lectora_de_datos(nombre)
                 #freqmic2 = (lecesp[1] + newfreq)
                 print(lecesp)
-                print("intento de valores promediados")
+                print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
                 freqmic = newfreq
                 freqcap = capacitivo
                 valamp = amplitud
