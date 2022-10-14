@@ -3,7 +3,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QMovie
 from PyQt5.QtCore import Qt
 from time import sleep
-
 class StandbyGif(object):
     def mainUI(self, FrontWindow):
         FrontWindow.setObjectName("FTwindow")
