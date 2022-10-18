@@ -1,11 +1,15 @@
 #################################################################################################################
 
-#                   Version a terminar // implementacion de base de datos csv // 
+#                   Version a terminar // deteccion de materiales en base a una referencia
+#                   Falta implementar base de datos csv y refinar la tolerancia del algoritmo
 
 ##############################################################################################################
-
+from turtle import delay
+from sortedcollections import SortedList
 import numpy as np,scipy.fftpack as fourier,matplotlib.pyplot as plt,matplotlib,pyaudio as pa,struct,threading,queue,csv
 from time import sleep
+
+ref = [["metal",[1450.00,1500.00,1600.00]],["plastico",[1200.00,1300.00,1350.00]],["aire",[200,300,100]]]
 
 matplotlib.use('TkAgg')
 
@@ -25,27 +29,68 @@ amplitud = 5555    # Valor temporal (a reemplazar)
 cola = queue.LifoQueue()
 
 p = pa.PyAudio()
+##### Funcion que limpia la entrada de datos y detecta el tipo de material
+def limpiadora_general(a_limpiar,ref):
+    filtrado =[]
+    finales = []
+    limpio=[]
+    print("filtrado: ",filtrado)
+    print("finales: ",finales)
+    a_limpiar = SortedList(a_limpiar)
+    ref = SortedList(ref)
+    for b in range(len(ref)):
+        nom = ref[b][0]
+        espref = ref[b][1]
+        for c in range(len(a_limpiar)):
+            limpio = list(a_limpiar.irange(0.65 * int(espref[1]), 1.55 * int(espref[1])))
+            filtrado.append(limpio)
+            limpio = [*set(limpio)]
+        if len(limpio):
+            #print("vale algo :",limpio," y es un ",nom)
+            finales.append([limpio,nom])
+            if nom != "aire":
+                print("el material es un: ",nom," y vale :",limpio)
+            else:
+                print("no hay un material con freq importante")
+    #print("filtrado terminado: ",finales)
+#### Funcion Limpiadora: obtiene unicamente la informacion importante de todo el ruido ambiente
+def limpiadora(a_limpiar,ref):
+    filtrado =[]
+    a_limpiar = SortedList(a_limpiar)
+    ref = SortedList(ref)
+    nom = input("material a comparar: ")
+    for a in range(len(ref)):
+        if ref[a][0] == nom:
+            print("coincidencia: ",ref[a][0])
+            espref = ref[a][1]
+            print("Ahora espref vale: ",ref[a][1])
+    for c in range(len(a_limpiar)):
+        limpio = list(a_limpiar.irange(0.65 * int(espref[1]), 1.55 * int(espref[1])))
+        ### Falta ajustar la tolerancia para ponerlo a punto
+        filtrado.append(limpio)
+        limpio = [*set(limpio)]
+    set(limpio)
+    print("filtrado terminado: ",limpio)
+
 ##### Funcion creadora: Pide la entrada de datos para la clase asignadora ####
 def creadora(): #1
-    global freqmic,freqcap,valamp,nombre
     nombre=str(input("Nombre del material a cargar? :  "))
-    freqmic=newfreq
-    freqcap=capacitivo
-    valamp = amplitud
+    freq_mic = newfreq
+    freq_cap = 1234 #agarrar el valor de diferencia de capacitancia directo de la pico
+    val_ind = 1 #agarrar el valor del sensor inductivo directo de la pico
     print("Valores asignados, clase creada ")
-    print(nombre,freqmic,freqcap,valamp)
-    return(nombre,freqmic,freqcap,valamp)
+    return(nombre,freq_mic,val_ind,freq_cap)
 ##### Funcion asignadora: guarda los datos en el diccionario de forma ordenada ####
-def asignadora():#2
-    global database
-    database = database + [{"tipo":nombre, "freqmic":freqmic, "freqcap":freqcap, "valamp":valamp}]
+def asignadora(nombre,freq_mic,val_ind,freq_cap):#2
+    formated = [{"tipo":nombre, "freq_mic":freq_mic, "val_ind":freq_cap, "val_ind":val_ind}]
+    return(formated)
 ##### Funcion almacenadora: Guarda los datos del diccionario en el csv para formar la base de datos ####
-def almacenadora():#3
+def almacenadora(formated):#3
     try:
         with open(csv_file,"w") as file:
             writer = csv.DictWriter(file, fieldnames = indices)
             writer.writeheader()
-            for data in database:
+            for data in formated:
                 writer.writerow(data)
                 print("data guardada")
     except IOError:
@@ -75,10 +120,8 @@ def calculadorafft(cola):
         M_gk = abs(fourier.fft(dataInt)/FRAMES)
         Posm = np.where(M_gk == np.max(M_gk))[0][0]           # Encontramos la posición para la cual la Magnitud de FFT es máxim
         F_fund = F[Posm]
-        print(F_fund)
         #agrego data a la cola
         cola.put(F_fund)
-        print(F_fund)
 # funcion de recoleccion de informacion de frecuencias de sonido
 def freqasign(delayint,cola):
     sleep(delayint)
@@ -89,17 +132,28 @@ def freqasign(delayint,cola):
         basura = basura + [cola.get()]
     ##############################################################################
     newfreq = [cola.get()]
-    for a in range(delayint):
-        #retira inf. de la cola (pero la ultima inf. que se agrego porque es una cola de tipo lifo)
-        data = cola.get()
-        print("...")
-        newfreq = newfreq + [data]    
+    # for a in range(delayint):
+    #     #retira inf. de la cola (pero la ultima inf. que se agrego porque es una cola de tipo lifo)
+    #     data = cola.get()
+    #     print("...")
+    #     newfreq = newfreq + [data]    
     print("freq asignadas, calculando datos importantes....")
-    pass
-    print(newfreq)
-    creadora()
-    asignadora()
-    almacenadora()
+    while True:
+        newfreq = []
+        sleep(delayint)
+        for a in range(delayint):
+            #retira inf. de la cola (pero la ultima inf. que se agrego porque es una cola de tipo lifo)
+            data = cola.get()
+            print("data de la cola: ",data)
+            print("...")
+            newfreq = newfreq + [data]
+        z = limpiadora_general(newfreq,ref)
+
+    finalfreq = limpiadora(newfreq,ref)
+
+    nombre,freq_mic,val_ind,freq_cap = creadora()
+    data = asignadora(nombre,freq_mic,val_ind,freq_cap)
+    almacenadora(data)
     print("accion completada con exito")
 delayint=int(input("Delay__?:  "))
 print(delayint)
