@@ -6,6 +6,10 @@
 
 import numpy as np,scipy.fftpack as fourier,matplotlib.pyplot as plt,matplotlib,pyaudio as pa,struct,threading,queue,csv
 from time import sleep
+from sortedcollections import SortedList
+
+############### Valores de Referencia ##########################
+ref = [["metal",[1450.00,1500.00,1600.00]],["plastico",[1200.00,1300.00,1350.00]],["aire",[200,300,100]]]
 
 matplotlib.use('TkAgg')
 
@@ -65,6 +69,7 @@ def recalculadora(row2):
         finrecalc = newfreq + recalc
         len(recalc)
         for a in range(len(recalc[1])):
+            pass
 ##### Funcion asignadora: guarda los datos en el diccionario de forma ordenada ####
 def asignadora():#2
     global database
@@ -101,6 +106,34 @@ def calculadorafft(cola):
         #agrego data a la cola
         cola.put(F_fund)
         #print(F_fund)
+def limpiadora (lista):
+    lista = SortedList(lista)
+    nom = input("material a comparar: ")
+    for a in range(len(ref)):
+        if ref[a][0] == nom:
+            print("coincidencia: ",ref[a][0])
+            espref = ref[a][1]
+            print("Ahora espref vale: ",ref[a][1])
+    for c in range(len(lista)):
+        prueba3 = list(lista.irange(0.65 * int(espref[1]), 1.55 * int(espref[1])))
+        filtrado.append(prueba3)
+        prueba3 = [*set(prueba3)]
+        print("filtrado : ",filtrado)
+    set(prueba3)
+    print("filtrado terminado: ",prueba3)
+
+
+    #limpiadora requiere una referencia para comparar contra que limpar, nesesito saber de antemano el tipo de material
+    # por ahi si hago que busque similares dentro de la referencia y que eso lo lleve al tipo de material
+    filtrado = []
+    lista = SortedList(lista)
+    valref = SortedList(valref)
+    for c in range(len(lista)):
+        limpio = list(lista.irange(0.65 * int(valref[1][1]), 1.55 * int(valref[1][1])))
+        filtrado.append(limpio)
+    filtrado = [*set(limpio)]
+    print("filtrado : ",filtrado)
+    return(filtrado)
 # funcion de recoleccion de informacion de frecuencias de sonido
 def freqasign(delayint,cola):
     sleep(delayint)
@@ -115,7 +148,6 @@ def freqasign(delayint,cola):
         #retira inf. de la cola (pero la ultima inf. que se agrego porque es una cola de tipo lifo)
         data = cola.get()
         print("...")
-        global newfreq
         newfreq = newfreq + [data]    
     print("freq asignadas, calculando datos importantes....")
     pass
@@ -137,8 +169,9 @@ def creadora(tlista): #1
             preg.lower()
             if preg == "s":
                 lecesp = lectora_de_datos(nombre)
+                filtrado = limpiadora(lecesp)
                 #freqmic2 = (lecesp[1] + newfreq)
-                print(lecesp)
+                print(filtrado)
                 print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
                 freqmic = newfreq
                 freqcap = capacitivo
