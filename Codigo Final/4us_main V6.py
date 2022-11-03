@@ -4,12 +4,17 @@
 #                   Falta implementar base de datos csv y refinar la tolerancia del algoritmo
 
 ##############################################################################################################
+#                    Todos los parametros para las funciones se pasan en el siguiente formato
+#                               (nombre,freq_mic,val_ind,freq_cap)
+################################################################################################################
 from turtle import delay
 from sortedcollections import SortedList
 import numpy as np,scipy.fftpack as fourier,matplotlib.pyplot as plt,matplotlib,pyaudio as pa,struct,threading,queue,csv
 from time import sleep
+#import RPi.GPIO as gpio    Descomentar para la version de raspberry
+import serial
 
-ref = [["metal",[1450.00,1500.00,1600.00]],["plastico",[1200.00,1300.00,1350.00]],["aire",[200,300,100]]]
+ref = [["metal",[1450.00,1500.00,1600.00,2000.00,3000.00]],["plastico",[1200.00,1300.00,1350.00]],["aire",[200,300,100]]]
 
 matplotlib.use('TkAgg')
 
@@ -29,13 +34,14 @@ amplitud = 5555    # Valor temporal (a reemplazar)
 cola = queue.LifoQueue()
 
 p = pa.PyAudio()
+
+ser = serial.Serial("/dev/serial0", 9600)
+
 ##### Funcion que limpia la entrada de datos y detecta el tipo de material
 def limpiadora_general(a_limpiar,ref):
     filtrado =[]
     finales = []
     limpio=[]
-    print("filtrado: ",filtrado)
-    print("finales: ",finales)
     a_limpiar = SortedList(a_limpiar)
     ref = SortedList(ref)
     for b in range(len(ref)):
@@ -50,6 +56,10 @@ def limpiadora_general(a_limpiar,ref):
             finales.append([limpio,nom])
             if nom != "aire":
                 print("el material es un: ",nom," y vale :",limpio)
+                if mdo_asign == True:
+                    print("asignando datos....")
+                    asignadora(nom,limpio,0,0)
+                    return(0)
             else:
                 print("no hay un material con freq importante")
     #print("filtrado terminado: ",finales)
@@ -83,7 +93,8 @@ def creadora(): #1
 ##### Funcion asignadora: guarda los datos en el diccionario de forma ordenada ####
 def asignadora(nombre,freq_mic,val_ind,freq_cap):#2
     formated = [{"tipo":nombre, "freq_mic":freq_mic, "val_ind":freq_cap, "val_ind":val_ind}]
-    return(formated)
+    almacenadora(formated)
+    return
 ##### Funcion almacenadora: Guarda los datos del diccionario en el csv para formar la base de datos ####
 def almacenadora(formated):#3
     try:
@@ -124,7 +135,6 @@ def calculadorafft(cola):
         cola.put(F_fund)
 # funcion de recoleccion de informacion de frecuencias de sonido
 def freqasign(delayint,cola):
-    sleep(delayint)
     global newfreq
     # Funcion que se encarga de eliminar la informacion erronea del mic al inciar
     basura = [cola.get()]
@@ -132,11 +142,8 @@ def freqasign(delayint,cola):
         basura = basura + [cola.get()]
     ##############################################################################
     newfreq = [cola.get()]
-    
-    print("freq asignadas, calculando datos importantes....")
     while True:
         newfreq = []
-        sleep(delayint)
         for a in range(delayint):
             #retira inf. de la cola (pero la ultima inf. que se agrego porque es una cola de tipo lifo)
             data = cola.get()
@@ -144,16 +151,30 @@ def freqasign(delayint,cola):
             print("...")
             newfreq = newfreq + [data]
         z = limpiadora_general(newfreq,ref)
+def escucha():
+    while 1 :
+        sleep(10)
+        message ='''
+        {
+        "type" : "metal",
+        "frequency" : [283,345,234,465],
+        "is_metal" : 0,
+        "capacitivo" : 93485793580
+        }
+        '''
+    print(message)
+    ser.write(message.encode(encoding='UTF-8'))
 
-    finalfreq = limpiadora(newfreq,ref)
-
-    nombre,freq_mic,val_ind,freq_cap = creadora()
-    data = asignadora(nombre,freq_mic,val_ind,freq_cap)
-    almacenadora(data)
     print("accion completada con exito")
-delayint=int(input("Delay__?:  "))
-print(delayint)
-
+delayint=int(input("Cantidad de mustras por toma?:  "))
+mdo_asign = str(input("Desea hacer una asignacion? (S/N): "))
+if mdo_asign.lower() == "s":
+    mdo_asign = True
+    print("Esperando asignacion.....")
+else:
+    mdo_asign = False
+    print("Asignacion cancelada ")
+print("Inicializando escaneo con",delayint,"muestras por segundo.......")
 # Designa los diferentes threads
 fft_c = threading.Thread(target=calculadorafft, args=(cola,))
 asignar = threading.Thread(target=freqasign, args=(delayint,cola,))

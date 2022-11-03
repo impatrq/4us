@@ -38,8 +38,8 @@ def lectora():
         tmateriales = []
         try:
             for row in lectura:
-                print(row[0])
-                tmateriales.append(str(row[0]))
+                print(row)
+                tmateriales.append(str(row))
         except:
             print("final de lista")
             print("tipos de materiales: ",tmateriales)
