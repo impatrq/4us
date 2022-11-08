@@ -1,0 +1,18 @@
+    /* Use a media query to add a break point at 800px: */
+    @media (max-width: 800px){
+        
+        body {
+            background-image: ("./fondo 4us_Mesa de trabajo 1.jpg");
+        }
+    
+
+    .form {
+        width: 60%;
+        margin: 0 auto;
+    }
+    
+    img {
+        height: 200px;
+    }
+        }
+        

@@ -6,36 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Proyecto 4us </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="small.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <body background="./fondo 4us_Mesa de trabajo 1.jpg">
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <a class="navbar-brand" href="#!">4us</a>
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="#!">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Nosotros</a>
+                <a class="nav-link" href="#!">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link" href="#!">Contact</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav d-flex flex-row">
+              <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="#!">
+                  <i class="fas fa-shopping-cart"></i>
+                </a>
+              </li>
+              <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="#!">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="#!">
+                  <i class="fab fa-instagram"></i>
+                </a>
               </li>
             </ul>
           </div>
         </div>
-    </nav>
+      </nav>
+    
+      <!-- Navbar -->
+      <section>
+        <div id="intro" class="bg-image" style=
+            "background-image: url(/waste-sorting-banner.jpg); height: 100vh;">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">
+            <div class="container d-flex justify-content-center align-items-center h-100">
+              <div class="row align-items-center">
+                <div class="col-12">
+                  <h1 class="mb-0 text-white display-1">Proyecto 4us</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Design Block-->
+    </header>
+    
+     <main>
+       <div class="container my-5 py-5"></div>
+    </main>
+ 
     <h1> Proyecto 4us </h1>
-    <h2> Cuidar el planeta es cuidarnos </h2>
-        <p> 4us es un tacho de reciclaje inteligente
-            cuyo principal objetivo es impulsar a los más
-            chicos a que implementen esta indispensable
-            acción para mejorar el lugar donde vivimos 
+      <h3> "Cuidar el planeta es cuidarnos" </h3>
+         <h6 id="resumen"> Reciclar implica dejar de generar basura y reutilizar algo que sino tardaría años en 
+          degradarse. Es un cambio de hábito que debemos realizar y que debemos enseñar a los 
+          niños desde pequeños porque ellos serán quienes el día de mañana deberán cuidar el 
+          medioambiente.
+          Con 4us tomamos la iniciativa de abordar este problema muy presente en la vida 
+          diaria, la falta de separación de residuos, esto es muy preocupante particularmente, 
+          porque si estos materiales reciclables no son separados previamente a ser desechados, 
+          se desperdician y nunca llegan a las plantas de reciclaje. </h6>
+          
         </div>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
           <div class="carousel-indicators">
@@ -45,13 +97,13 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="..." class="d-block w-100" alt="...">
+              <div align = "center"><img src="./20220922_155246.jpg" class="d-block" alt="150"> </div>
             </div>
             <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
+              <div align = "center"> <img src="./foto chicos.jpg" class="d-block" alt="150"> </div>
             </div>
             <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
+              <div align = "center" > <img src="./20220606_105811.jpg" class="d-block" alt="150"> </div>
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -65,7 +117,10 @@
         </div>
       </div>
     </nav>
-    <h1> ¿Quiénes somos? </h1>
+    
+
+    <br> 
+      <h4 id="quienes"> ¿Quiénes somos? </h4>
         <p> Somos un grupo de estudiante del último
           año de la Escuela Educación Técnica N°7, 
           más conocida como IMPA, realizando el
@@ -73,23 +128,38 @@
           promocionar y además de eso, competir 
           en las ONIET (Olimpiadas Nacionales de 
           Innovación, Informática, Electrónica y 
-          Tecnología aplicada)
+          Tecnología aplicada) </p>
+    </br>
+    <hr/>
         </div>
-</section>
-  <h4> Contactate con nosotros </h4>
-  <div class="col">
-    <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+  <div class="form">
+    <form action="">
+      <h4>Contactate con nosotros</h4>
+      <div class="col mb-3">
+        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+      </div>
+    
+      <div class="col mb-3">
+          <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+      </div>
+    
+      <div class="mb-3">
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder= "Mensaje" rows="3"></textarea>
+      </div>
+    </form> 
   </div>
-  <div class="col">
-    <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+  <div id="pagina">
+    <div id="contenido"></div>
+    <div id="pie">2022 &copy; Proyecto 4us</div>
   </div>
+
 </div>
-<div class="mb-3">
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
-</div>
-<div class="mb-3">
-  <textarea class="form-control" id="exampleFormControlTextarea1" placeholder= "Mensaje" rows="3"></textarea>
-</div>
-</div>  
 </body> 
 </html>
