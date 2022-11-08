@@ -4,10 +4,12 @@
 
 ##############################################################################################################
 
-import numpy as np,scipy.fftpack as fourier,matplotlib.pyplot as plt,matplotlib,pyaudio as pa,struct,threading,queue,csv
+import numpy as np,scipy.fftpack as fourier,pyaudio as pa,struct,threading,queue,csv
 from time import sleep
+from sortedcollections import SortedList
 
-#matplotlib.use('TkAgg')
+############### Valores de Referencia ##########################
+ref = [["metal",[1450.00,1500.00,1600.00]],["plastico",[1200.00,1300.00,1350.00]]]
 
 FRAMES = 1024*8                                   # Tamaño del paquete a procesar
 FORMAT = pa.paInt16                               # Formato de lectura INT 16 bits
@@ -26,15 +28,46 @@ cola = queue.LifoQueue()
 
 p = pa.PyAudio()
 ##### Funcion creadora: Pide la entrada de datos para la clase asignadora ####
-def creadora(): #1
-    global freqmic,freqcap,valamp,nombre
-    nombre=str(input("Nombre del material a cargar? :  "))
-    freqmic=newfreq
-    freqcap=capacitivo
-    valamp = amplitud
-    print("Valores asignados, clase creada ")
-    print(nombre,freqmic,freqcap,valamp)
-    return(nombre,freqmic,freqcap,valamp)
+def lectora():
+    with open(csv_file, newline="") as File:
+        print("inicio de lectura")
+        lectura = csv.reader(File)
+        global tmateriales
+        tmateriales = []
+        try:
+            for row in lectura:
+                print(row[0])
+                tmateriales.append(str(row[0]))
+        except:
+            print("final de lista")
+            print("tipos de materiales: ",tmateriales)
+        return tmateriales
+def lectora_de_datos(nombre):
+    with open(csv_file, newline="") as File:
+        lectura=list(csv.reader(File))
+        for row in lectura:
+            print("...")
+            if row[0] == nombre:
+                print("esta :",row[0])
+                return row
+            else: pass
+
+def recalculadora(row2):
+    with open(csv_file, newline="") as File:
+        lectura = csv.reader(File)
+        csvdata = []
+        for row in lectura:
+            print("...")
+            if row[0] == nombre:
+                recalc = row
+            else:
+                print(row[0])
+                csvdata.append(row)
+        #### Pensar bien el algoritmo que elimina la basura
+        finrecalc = newfreq + recalc
+        len(recalc)
+        for a in range(len(recalc[1])):
+            pass
 ##### Funcion asignadora: guarda los datos en el diccionario de forma ordenada ####
 def asignadora():#2
     global database
@@ -42,22 +75,15 @@ def asignadora():#2
 ##### Funcion almacenadora: Guarda los datos del diccionario en el csv para formar la base de datos ####
 def almacenadora():#3
     try:
-        with open(csv_file,"w") as file:
+        with open(csv_file,"a") as file:
             writer = csv.DictWriter(file, fieldnames = indices)
             writer.writeheader()
             for data in database:
                 writer.writerow(data)
                 print("data guardada")
     except IOError:
-        print("I/O error")
+        print("Error al abrir.... X ")
 ###### Funcion lectora: Lee los datos directo de la base de datos
-def lectora():
-    with open(csv_file, newline="") as File:
-        print("inicio de lectura")
-        lectura = csv.reader(File)
-        for row in lectura:
-            print(row)
-
 #funcion de calculos fft (magnitud de frecuencia y amplitud)
 def calculadorafft(cola):
     stream = p.open(                                  # Abrimos el canal de audio con los parámeteros de configuración
@@ -77,7 +103,17 @@ def calculadorafft(cola):
         F_fund = F[Posm]
         #agrego data a la cola
         cola.put(F_fund)
-        print(F_fund)
+        #print(F_fund)
+def limpiadora (lista,valref):
+    filtrado = []
+    lista = SortedList(lista)
+    valref = SortedList(valref)
+    for c in range(len(lista)):
+        limpio = list(lista.irange(0.65 * int(valref[1][1]), 1.55 * int(valref[1][1])))
+        filtrado.append(limpio)
+    filtrado = [*set(limpio)]
+    print("filtrado : ",filtrado)
+    return(filtrado)
 # funcion de recoleccion de informacion de frecuencias de sonido
 def freqasign(delayint,cola):
     sleep(delayint)
@@ -96,45 +132,37 @@ def freqasign(delayint,cola):
     print("freq asignadas, calculando datos importantes....")
     pass
     print(newfreq)
-    creadora()
-    asignadora()
-    almacenadora()
+    #creadora()
+    #asignadora()
+    #almacenadora()
     print("accion completada con exito")
 delayint=int(input("Delay__?:  "))
 print(delayint)
-##### Funcion creadora: Pide la entrada de datos para la clase asignadora ####
-# def creadora(): #1
-#     global freqmic,freqcap,valamp,nombre
-#     nombre=str(input("Nombre del material a cargar? :  "))
-#     freqmic=newfreq
-#     freqcap=capacitivo
-#     valamp = amplitud
-#     print("Valores asignados, clase creada ")
-#     print(nombre,freqmic,freqcap,valamp)
-#     return(nombre,freqmic,freqcap,valamp)
-# ##### Funcion asignadora: guarda los datos en el diccionario de forma ordenada ####
-# def asignadora():#2
-#     global database
-#     database = database + [{"tipo":nombre, "freqmic":freqmic, "freqcap":freqcap, "valamp":valamp}]
-# ##### Funcion almacenadora: Guarda los datos del diccionario en el csv para formar la base de datos ####
-# def almacenadora():#3
-#     try:
-#         with open(csv_file,"w") as file:
-#             writer = csv.DictWriter(file, fieldnames = indices)
-#             writer.writeheader()
-#             for data in database:
-#                 writer.writerow(data)
-#                 print("data guardada")
-#     except IOError:
-#         print("I/O error")
-# ###### Funcion lectora: Lee los datos directo de la base de datos
-# def lectora():
-#     with open(csv_file, newline="") as File:
-#         print("inicio de lectura")
-#         lectura = csv.reader(File)
-#         for row in lectura:
-#             print(row)
 
+def creadora(tlista): #1
+    print(tlista)
+    global freqmic,freqcap,valamp,nombre
+    nombre=str(input("Nombre del material a cargar? :  "))
+    if nombre in tlista:
+        while True:
+            preg = input("El material ya existe, asignar nuevos valores? : (S/N)")
+            preg.lower()
+            if preg == "s":
+                lecesp = lectora_de_datos(nombre)
+                filtrado = limpiadora(lecesp)
+                #freqmic2 = (lecesp[1] + newfreq)
+                print(filtrado)
+                print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+                freqmic = newfreq
+                freqcap = capacitivo
+                valamp = amplitud
+                break
+            if preg == "n":
+                print("Accion rechazada.. ")
+                break
+            else:
+                print("Entrada no valida ")
+    print("Valores asignados, clase creada ")
 
 # Designa los diferentes threads
 fft_c = threading.Thread(target=calculadorafft, args=(cola,))
@@ -142,3 +170,6 @@ asignar = threading.Thread(target=freqasign, args=(delayint,cola,))
 # inicia los threads
 fft_c.start()
 asignar.start()
+tlista = lectora()
+print(tlista)
+creadora(tlista)
