@@ -6,45 +6,38 @@ body {
     background-position: center center; 
   }
   
-  @media (max-width: 991px) {
-    .navbar-scroll {
-      background-color: #fff;
-    }
-       
-    .navbar-scroll .navbar-brand,
-    .navbar-scroll .nav-link,
-    .navbar-scroll .fa-bars {
-      color: #4f4f4f !important;
-    }         
-  }
   
-  .navbar-brand {
-    letter-spacing: 3px;
-    font-size: 2rem;
-    font-weight: 500;
+  /* Style the navbar */
+  #navbar {
+    overflow: hidden;
+    background-color: #333;
   }
-  .navbar-scroll .navbar-brand,
-  .navbar-scroll .nav-link,
-  .navbar-scroll .fa-bars {
-    color: #fff;
+
+  /* Navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
   }
-  
-  .navbar-scroll {
-    box-shadow: none;
+
+  /* Page content */
+  .content {
+    padding: 16px;
   }
-  
-  .navbar-scrolled {
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
-  
-  .navbar-scrolled .navbar-brand,
-  .navbar-scrolled .nav-link,
-  .navbar-scrolled .fa-bars {
-    color: #4f4f4f;
-  }
-  
-  .navbar-scrolled {
-    background-color: #fff;
+
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
   }
   
   @media (max-width: 450px) {
@@ -101,16 +94,16 @@ body {
       height:100%;
     }
     
-    #pagina {
+  #pagina {
       position: relative;
       min-height: 100%;
     }
     
-    #contenido {
+  #contenido {
       padding-bottom:100px; /* este valor debe ser igual o mayor al alto del pie */
     }
     
-    #pie {
+  #pie {
       height:200px;
       line-height:200px;
       background:#386641;
