@@ -49,7 +49,7 @@
             correspondiente, caso contrario, se lo devuelve para que lo vuelva a intentar. </h5>
 
             <div class="tacho3d">
-              <img src="C:\Users\Cami\Documents\GitHub\4us\4us_Web\4us 3d.png" alt="">
+              <img src="./4us 3d.png" alt="4us">
             </div>
 
             <br> 
@@ -67,14 +67,17 @@
             <h5 id="cami">Camila</h5>
             <h6> Diseñadora, programación web y micropython</h6>
               <div class="fotocami">
-                <img src="4us_Web\cami_foto.png" alt="cami_foto" class="fotocami">
-                <a href="https://www.linkedin.com/in/camilaromero23/" class="enlace_linkedin" target="_blank"><img src="img/linkedin.svg" alt="linkedin" ></a>
+                <img src="./cami_foto.png" alt="cami_foto" class="fotocami">
+                <a href="https://www.linkedin.com/in/camilaromero23/" class="enlace_linkedin" target="_blank"><img src="./img/linkedin.svg" alt="linkedin" ></a>
               </div>
               
 
             <h5 id="fede">Federico</h5>
             <h6> Promador, python y micropython</h6>
-
+              <div class="fotofede">
+                <img scr="./4us_Web\fede_foto.png" alt="foto_fede" id="fotofede">
+                <a href="https://www.linkedin.com/in/federico-aranda-27615a239/" class="enlace_linkedin" target="_blank"><img src="./img/linkedin.svg" alt="linkedin" ></a>
+              </div>
 
             <h5 id="dego">Maximo</h5>
             <h6> Diseño de plaquetas y pcb </h6>
@@ -100,32 +103,16 @@
   
               
                   <p id="textform">
-                    <label for="nombre" class="colocar_nombre">Nombre
-                      <span class="obligatorio">*</span>
-                    </label>
-                      <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Nombre">
                   </p>
                 
                   <p>
-                    <label for="email" class="colocar_email">Email
-                      <span class="obligatorio">*</span>
-                    </label>
-                      <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                    <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Mail">
                   </p>   
                 
                   <p>
-                    <label for="asunto" class="colocar_asunto">Asunto
-                      <span class="obligatorio">*</span>
-                    </label>
-                      <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
-                  </p>    
-                
-                  <p>
-                    <label for="mensaje" class="colocar_mensaje">Mensaje
-                      <span class="obligatorio">*</span>
-                    </label>                     
-                                      <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
-                                  </p>                    
+                    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                  </p>                    
                 
                   <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
   
@@ -136,7 +123,7 @@
             </form>
       </div>  
     </div>
-<!-- END OF FORM -->
+<!-- END OF FORm -->
 
 <footer class="text-center footer-style">
   <div class="container">
@@ -150,23 +137,12 @@
           </div>
           <div class="col-md-4 footer-col">
               <h3>Nuestras redes</h3>
-              <ul class="list-inline">
-                  <li>
-                      <a  target="_blank" href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                  </li>
-                  <li>
-                      <a  target="_blank" href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                  </li>
-                  <li>
-                      <a  target="_blank" href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                  </li>
-                  <li>
-                      <a  target="_blank" href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                  </li>
-                  <li>
-                      <a  target="_blank" href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                  </li>
-              </ul>
+              <section class="buttons">
+                <a href="https://www.facebook.com/proyecto4us/" class="fa fa-facebook"> <img scr="./4us_Web\facebook-svgrepo-com.svg"></a>
+                <a href="https://www.instagram.com/proyecto_4us/" class="fa fa-instagram"> <img scr="./4us_Web\instagram-svgrepo-com.svg"> </a>
+                <a href="https://www.youtube.com/channel/UCdvToWmrBxeEpclHknaLLQw" class="fa fa-youtube"> <img scr="./4us_Web\youtube-svgrepo-com.svg"> </a>
+                <a href="https://www.linkedin.com/company/proyecto-4us/" class="fa fa-linkedin"> <img scr="./4us_Web\linkedin-svgrepo-com.svg"></a>
+              </section>
           </div>
           <div class="col-md-4 footer-col">
               <h3>Proyecto 4us</h3>
