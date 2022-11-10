@@ -67,12 +67,12 @@ body {
       font-size: 10rem;
     }
   }
-  .contenedor_resumen {
+  .conteiner {
     display: flex;
     flex-direction: row;
   }
 
-  #contenedor_parrafo {
+  .resumen_proyecto {
     display: flex;
     justify-content: center;
     align-items: center;
