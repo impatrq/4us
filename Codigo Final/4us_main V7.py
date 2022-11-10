@@ -4,7 +4,6 @@
 from sortedcollections import SortedList
 import numpy as np
 import scipy.fftpack as fourier
-import matplotlib
 import pyaudio as pa
 import struct
 import threading
@@ -252,9 +251,11 @@ def freqasign(delayint, cola):
                         if matnom == matpress:
                             print("!!__CORRECTO__!!")
                             print("__Concidencia de material__")
+                            print("__El material Ingresado si es un",matnom,"__")
                         else:
                             print("!!__ERRONEO__!!")
                             print("__No hay concidencia de material__")
+                            print("__El Material Ingresado es un",matnom,"no un",matpress,"__")
 
         sleep(1)
 
