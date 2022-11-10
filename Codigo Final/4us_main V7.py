@@ -4,7 +4,8 @@
 from sortedcollections import SortedList
 import numpy as np,scipy.fftpack as fourier,matplotlib,pyaudio as pa,struct,threading,queue,csv
 from time import sleep
-import RPi.GPIO as GPIO
+from keyboard import is_pressed
+#import RPi.GPIO as GPIO
 
 notref = [["metal",[1450.00,1500.00,1600.00,2000.00,3000.00,3500,800,700],True],["plastico",[0,0],False],["aire",[200,300,100]]]
 
@@ -29,13 +30,12 @@ tolerancia = 50
 estado = False
 
 sensor_2 = 21
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(sensor_2,GPIO.IN)
+# GPIO.setmode(GPIO.BCM)
+# GPIO.setup(sensor_2,GPIO.IN)
 
 ##### Funcion que limpia la entrada de datos y detecta el tipo de material
 def limpiadora_general(a_limpiar):
     global estado
-    flag = False
     ref = fst_lectora()
     filtrado =[]
     finales = []
@@ -44,64 +44,52 @@ def limpiadora_general(a_limpiar):
     #print("data recivida para limpiar: ",a_limpiar)
     if len(ref) != 0:
         for b in range(len(ref)):
-            #print("referencia de mic vale: ",ref[str(b+1)]["freq_mic"])
-            #nom = ref[str(b+1)]["tipo"]
             try:
                 nom = ref[str(b+1)]["tipo"]
-                #nom = notref[b][0]
-                print("nombre vale:" ,nom)
+                print("nom asignada ",nom)
             except:
-                print("error de asignacion de nombre :/ ")
-                pass
+                print("ERROR_ ASIGNACION NOMBRE")
+            try:
+                espref = [str(b+1)]["freq_mic"]
+                print("espref asignada ",espref)
+            except:
+                print("ERROR_ ASIGNACION PARAMETROS")
+            for c in range(len(a_limpiar)):
+                for z in range(len(espref)):
+                    #print("espref vale: ",espref)
+                    limpio = list(a_limpiar.irange(0.65 * int(espref[z]), 1.55 * int(espref[z])))
+                    filtrado.append(limpio)
+                    filtrado = [*set(filtrado)]
     else:
-        print("ERROR __ Ref nula ")
-        #espref = SortedList(ref[str(b+1)]["freq_mic"])
-        #print("ref vale:",ref)
-        #espref = ref[str(b+1)]["freq_mic"]
-    try:
-        espref = notref[b][1]
-        for c in range(len(a_limpiar)):
-            for z in range(len(espref)):
-                #print("espref vale: ",espref)
-                limpio = list(a_limpiar.irange(0.65 * int(espref[z]), 1.55 * int(espref[z])))
-                filtrado.append(limpio)
-                filtrado = [*set(filtrado)]
-                #print("filtrado vale : ",filtrado)
-    except:
-        pass
-        #is_metal = ref[b][2]
-        # for c in range(len(a_limpiar)):
-        #     for z in range(len(espref)):
-        #         #print("espref vale: ",espref)
-        #         print("espref: ",espref[z])
-        #         limpio = list(a_limpiar.irange(0.65 * int(espref[z]), 1.55 * int(espref[z])))
-        #         filtrado.append(limpio)
-        #     limpio = [*set(limpio)]
-        # if len(limpio):
-            #print("vale algo :",limpio," y es un ",nom)
-            finales.append([limpio,nom])
-            # if nom != "aire":
-            #     if GPIO.input(ind_1) or GPIO.input(ind_2):
-            #         metal = True
-            #         print("es metal")
-            #     else:
-            #         metal = False
-            #         print("no es metal")
-            metal = False
-            if flag == False:
-                if limpio != []:
-                    print("el material es un: ",nom," y vale :",limpio,"is metal = ",metal)
-                    flag = True
-                    print("retornando limpio, ",limpio)
-                if mdo_asign == True:
-                    print("asignando datos....")
-                    intnom = input("Ingrese el nombre del material a cargar: ")
-                    estado = False
-                    asignadora(intnom,limpio,metal,0)
-                    return(0)
-                else:
-                    print("no hay un material con freq importante")
-    #print("filtrado terminado: ",finales)
+        print("WARN __ Ref nula, usando ref nativa....")
+        for nrf in range(len(notref)):
+            espref = notref[nrf][1]
+            nom = notref[nrf][0]
+            #ferrintrs = notref[nrf][2]
+            for c in range(len(a_limpiar)):
+                for z2 in range(len(espref)):
+                    #print("espref vale: ",espref)
+                    limpio = list(a_limpiar.irange(0.65 * int(espref[z2]), 1.55 * int(espref[z2])))
+                    if limpio != []:
+                        print("agregando .",limpio)
+                        filtrado = filtrado + limpio
+                    filtrado = [*set(filtrado)]
+                    print("Filtrado realmente vale: ",filtrado)
+    finales.append([limpio,nom])
+    if filtrado != []:
+        if is_pressed("m"):
+            print("simulando sens.ind...")
+            print("El material es un metal y vale :",filtrado)
+        else:
+            print("el material es un: ",nom," y vale :",filtrado)
+        if is_pressed("a"):
+            print("asignando datos....")
+            intnom = input("Ingrese el nombre del material a cargar: ")
+            asignadora(intnom,limpio,0)
+            return(0)
+    else:
+        print("no hay un material con freq importante")
+        print("limpio vale : ",limpio)
 
 def fst_lectora():
     cont = 0
@@ -207,8 +195,7 @@ def freqasign(delayint,cola):
     while True:
         newfreq = []
         #if GPIO.input(sensor_2) == 0:
-        if True:
-            estado = True
+        if is_pressed("d"):
             print("objeto detectado por alguno de los dos sensores")
             sleep(.5)
             for a in range(delayint):
@@ -217,9 +204,10 @@ def freqasign(delayint,cola):
                 print("data de la cola: ",data)
                 print("...")
                 newfreq = newfreq + [data]
-            print("data que le va a ir a la limpiadora esp: ",newfreq)
-            z = limpiadora_general(newfreq)
-            estado = False
+                if a >= (delayint -1):
+                    print("entrando a limpiadora general ",newfreq)
+                    z = limpiadora_general(newfreq)
+            
         sleep(1)
     #     print("hilo de asignar desbloqueado") 
 #delayint=int(input("Cantidad de mustras por toma?:  "))
