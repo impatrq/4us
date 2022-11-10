@@ -67,8 +67,26 @@ body {
       font-size: 10rem;
     }
   }
-  
-  
+  .contenedor_resumen {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #contenedor_parrafo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*padding: 50px;*/
+  }
+
+ 
+  .tacho3d {
+    display: block;
+    margin-left: 60%;
+    margin-right: auto;
+    width: 50%;
+  }
+
   .fotocami {
     width: 150px;
     height: 150px;
