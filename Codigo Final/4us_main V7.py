@@ -46,14 +46,16 @@ sensor_2 = 21
 
 
 def limpiadora_general(a_limpiar):
-    global estado
     ref = fst_lectora()
     filtrado = []
     finales = []
     limpio = []
+    espref = []
+    nom = ""
     a_limpiar = SortedList(a_limpiar)
     #print("data recivida para limpiar: ",a_limpiar)
-    if len(ref) != 0:
+    print(len(ref))
+    if len(ref) != 0 and len(ref) >= 6:
         for b in range(len(ref)):
             try:
                 nom = ref[str(b+1)]["tipo"]
@@ -73,7 +75,7 @@ def limpiadora_general(a_limpiar):
                     filtrado.append(limpio)
                     filtrado = [*set(filtrado)]
     else:
-        print("WARN __ Ref nula, usando ref nativa....")
+        print("WARN __ Ref nula o insuficiente, usando ref nativa....")
         for nrf in range(len(notref)):
             espref = notref[nrf][1]
             nom = notref[nrf][0]
@@ -97,7 +99,7 @@ def limpiadora_general(a_limpiar):
         if is_pressed("a"):
             print("asignando datos....")
             intnom = input("Ingrese el nombre del material a cargar: ")
-            asignadora(intnom, limpio, 0)
+            asignadora(intnom, limpio, 0,0)
             return (0)
     else:
         print("no hay un material con freq importante")
