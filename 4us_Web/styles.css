@@ -70,8 +70,18 @@ body {
   
   
   .fotocami {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .fotofede {
+    width: 150px;
+    height: 150px;
+  }
+
+  .enlace_linkedin2 {
+    width: 30px;
+    height: 30px;
   }
 
   .navbar-brand {
