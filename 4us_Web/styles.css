@@ -67,22 +67,26 @@ body {
       font-size: 10rem;
     }
   }
-  .conteiner {
+  .resumen__contenedor {
     display: flex;
     flex-direction: row;
+  }
+
+  .container {
+    padding: 50px;
   }
 
   .resumen_proyecto {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     /*padding: 50px;*/
   }
 
  
   .tacho3d {
     display: block;
-    margin-left: 60%;
     margin-right: auto;
     width: 50%;
   }
