@@ -45,16 +45,25 @@ sensor_2 = 21
 # Funcion que limpia la entrada de datos y detecta el tipo de material
 
 
-def limpiadora_general(a_limpiar):
+def limpiadora_general(a_limpiar,noise_flr):
+    print("Data recivida por limpiadora general: ",a_limpiar)
+    a_limpmic = []
+    a_limpamp = []
+    for a in range(len(a_limpiar)):
+        print("Noise flr vale: ",noise_flr)
+        if a_limpiar[a][1] >= noise_flr*0.75:
+            a_limpmic.append(a_limpiar[a][1])
+            print("Data agregada: ",a_limpiar[a][1],"Con frecuencia: ",a_limpiar[a][0])
+        else:
+            print("Data no guardada: ",a_limpiar[a][1])
     ref = fst_lectora()
     filtrado = []
     finales = []
     limpio = []
     espref = []
     nom = ""
-    a_limpiar = SortedList(a_limpiar)
+    a_limpmic = SortedList(a_limpmic)
     #print("data recivida para limpiar: ",a_limpiar)
-    print(len(ref))
     if len(ref) != 0 and len(ref) >= 6:
         for b in range(len(ref)):
             try:
@@ -67,10 +76,10 @@ def limpiadora_general(a_limpiar):
                 print("espref asignada ", espref)
             except:
                 print("ERROR_ ASIGNACION PARAMETROS")
-            for c in range(len(a_limpiar)):
+            for c in range(len(a_limpmic)):
                 for z in range(len(espref)):
                     #print("espref vale: ",espref)
-                    limpio = list(a_limpiar.irange(
+                    limpio = list(a_limpmic.irange(
                         0.65 * int(espref[z]), 1.55 * int(espref[z])))
                     filtrado.append(limpio)
                     filtrado = [*set(filtrado)]
@@ -80,10 +89,10 @@ def limpiadora_general(a_limpiar):
             espref = notref[nrf][1]
             nom = notref[nrf][0]
             #ferrintrs = notref[nrf][2]
-            for c in range(len(a_limpiar)):
+            for c in range(len(a_limpmic)):
                 for z2 in range(len(espref)):
                     #print("espref vale: ",espref)
-                    limpio = list(a_limpiar.irange(
+                    limpio = list(a_limpmic.irange(
                         0.65 * int(espref[z2]), 1.55 * int(espref[z2])))
                     if limpio != []:
                         filtrado = filtrado + limpio
@@ -106,7 +115,17 @@ def limpiadora_general(a_limpiar):
         print("limpio vale : ", limpio)
     return(nom)
 
-
+def noise_floor(cicles):
+    noise_lvl = []
+    print("cantidad de ciclos a realizar: ",cicles)
+    for one in range(cicles):
+        crntnoise = cola.get()
+        crntnoise = crntnoise[1]
+        noise_lvl.append(crntnoise)
+    print("Valores de ruido: ",noise_lvl)
+    noise_flr = sum(noise_lvl)/len(noise_lvl)
+    print("Valor promedio de ruido: ",noise_flr)
+    return(noise_flr)
 def fst_lectora():
     cont = 0
     upto_database = {}
@@ -210,7 +229,8 @@ def calculadorafft(cola):
         F_fund = F[Posm]
         # agrego data a la cola
         if F_fund >= tolerancia:
-            cola.put(F_fund)
+            #print("Señal : ",F_fund, "amp : ",max(M_gk))
+            cola.put([F_fund,max(M_gk)])
         cont = cont + 1
 # funcion de recoleccion de informacion de frecuencias de sonido
 
@@ -222,6 +242,7 @@ def freqasign(delayint, cola):
     basura = [cola.get()]
     for a in range(5):
         basura = basura + [cola.get()]
+    noise_flr = noise_floor(10)
     ##############################################################################
     newfreq = [cola.get()]
     while True:
@@ -234,6 +255,7 @@ def freqasign(delayint, cola):
         if is_pressed("c"):
             matpress = "carton"
         newfreq = []
+        ampfreq = []
         # if GPIO.input(sensor_2) == 0:
         if is_pressed("d"):
             print("objeto detectado por alguno de los dos sensores")
@@ -243,10 +265,11 @@ def freqasign(delayint, cola):
                 data = cola.get()
                 print("data de la cola: ", data)
                 print("...")
-                newfreq = newfreq + [data]
+                newfreq.append(data)
+                print("entonces: freq: ",newfreq,)
                 if a >= (delayint - 1):
                     print("entrando a limpiadora general ", newfreq)
-                    matnom = limpiadora_general(newfreq)
+                    matnom = limpiadora_general(newfreq,noise_flr)
                     if matpress == "nada":
                         print("__Por Favor Presione un Boton__")
                     else:
