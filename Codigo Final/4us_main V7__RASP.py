@@ -11,10 +11,13 @@ import queue
 import csv
 from time import sleep
 from keyboard import is_pressed
-#import RPi.GPIO as GPIO
+import serial
+import RPi.GPIO as GPIO
 
 notref = [["metal", [1450.00, 1500.00, 1600.00, 2000.00, 3000.00, 3500,
-                     800, 700], True], ["plastico", [0, 0], False], ["aire", []]]#200, 300, 100]]]
+                     800, 700], True], ["plastico", [0, 0], False], ["aire", [200, 300, 100]]]
+
+ser = serial.Serial("/dev/serial0", 9600)
 
 FRAMES = 1024*8                                   # Tamaño del paquete a procesar
 FORMAT = pa.paInt16                               # Formato de lectura INT 16 bits
@@ -39,8 +42,8 @@ tolerancia = 50
 estado = False
 
 sensor_2 = 21
-# GPIO.setmode(GPIO.BCM)
-# GPIO.setup(sensor_2,GPIO.IN)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(sensor_2,GPIO.IN)
 
 # Funcion que limpia la entrada de datos y detecta el tipo de material
 
@@ -53,9 +56,9 @@ def limpiadora_general(a_limpiar,noise_flr):
         print("Noise flr vale: ",noise_flr)
         if a_limpiar[a][1] >= noise_flr*0.75:
             a_limpmic.append(a_limpiar[a][1])
-            print("Data agregada: ",a_limpiar[a][1],"                  data si guardada",a_limpiar[a][0])
+            print("Data agregada: ",a_limpiar[a][1],"Con frecuencia: ",a_limpiar[a][0])
         else:
-            print("Data no guardada: ",a_limpiar[a][1],"Con frecuencia: ",a_limpiar[a][0])
+            print("Data no guardada: ",a_limpiar[a][1])
     ref = fst_lectora()
     filtrado = []
     finales = []
@@ -96,16 +99,27 @@ def limpiadora_general(a_limpiar,noise_flr):
                         0.65 * int(espref[z2]), 1.55 * int(espref[z2])))
                     if limpio != []:
                         filtrado = filtrado + limpio
-                        filtrado = [*set(filtrado)]
-                        print("filtrado vale: ",filtrado,"con nombre ",nom)
+                    filtrado = [*set(filtrado)]
     finales.append([limpio, nom])
     if filtrado != []:
         if is_pressed("m"):
             nom = "metal"
             print("simulando sens.ind...")
             print("El material es un: ",nom," y vale :", filtrado)
+            message = f'''
+            {
+                "type" : "{nom}"
+            }
+            '''
+            ser.write(message.encode(encoding='UTF-8'))
         else:
             print("el material es un: ", nom," y vale :", filtrado)
+            message =f'''
+            {
+                "type" : "{nom}"
+            }
+            '''
+            ser.write(message.encode(encoding='UTF-8'))
         if is_pressed("a"):
             print("asignando datos....")
             intnom = input("Ingrese el nombre del material a cargar: ")
@@ -241,9 +255,9 @@ def freqasign(delayint, cola):
     matpress = "nada"
     # Funcion que se encarga de eliminar la informacion erronea del mic al inciar
     basura = [cola.get()]
-    for a in range(10):
+    for a in range(5):
         basura = basura + [cola.get()]
-    noise_flr = noise_floor(50)
+    noise_flr = noise_floor(10)
     ##############################################################################
     newfreq = [cola.get()]
     while True:
