@@ -98,24 +98,14 @@ body {
     width: 50%;
   }
 
-  .fotocami {
+  .foto_alumno {
     width: 150px;
     height: 150px;
   }
 
-  .fotofede {
-    width: 150px;
-    height: 150px;
-  }
-
-  .enlace_linkedin {
-    width: 30px;
-    height: 30px;
-  }
-
-  .enlace_linkedin2 {
-    width: 30px;
-    height: 30px;
+  .linkedin_alumno {
+    height: 100px;
+    width: 180px;
   }
 
   .navbar-brand {
