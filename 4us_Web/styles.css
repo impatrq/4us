@@ -1,6 +1,6 @@
 body {
     height: 400px;
-    background-image: ("./fondo 4us_Mesa de trabajo 1.jpg");
+    background-image: ("./fondo 4us web_Mesa de trabajo 1.jpg");
     background-size: cover;
     background-repeat:repeat;
     background-position: center center; 
@@ -9,7 +9,7 @@ body {
   /* Style the navbar */
 #navbar {
   overflow: hidden;
-  background-color: green;
+  background-color: #386641;
 }
 
 /* Navbar links */
@@ -18,7 +18,7 @@ body {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px;
+  padding: 20px;
   text-decoration: none;
 }
 
@@ -114,6 +114,7 @@ body {
     height: 150px;
   }
 
+
   .linkedin_alumno {
     height: 100px;
     width: 180px;
@@ -150,14 +151,14 @@ body {
 
   .footer-style {
     padding-top: 50px;
-    background-color: green;
+    background-color: #386641;
   }
   footer {
   color: white;
   }
   footer h3 {
   margin-bottom: 30px;
-    font-weight: 800;
+  font-weight: 800;
   }
   footer .footer-above {
   padding-top: 50px;
@@ -169,6 +170,30 @@ body {
   footer .footer-below {
   padding: 25px 0;
   background-color: green;
+  }
+
+  .buttons {
+    min-width: 200px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .buttons a {
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: white;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+  }
+
+  .buttons a:hover {
+    transform: scale(1.2);
   }
   /*end footer*/
 
@@ -301,27 +326,3 @@ body {
     border: 1px solid #637933;
   }
    /*end of contact form*/
-
-   .buttons {
-    min-width: 200px;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .buttons a {
-    text-decoration: none;
-    font-size: 28px;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    background: white;
-    color: white;
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-    transition: all .4s ease-in-out;
-  }
-
-  .buttons a:hover {
-    transform: scale(1.2);
-  }
