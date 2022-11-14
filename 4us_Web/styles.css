@@ -118,6 +118,7 @@ body {
   .linkedin_alumno {
     height: 100px;
     width: 180px;
+    transition: all .4s ease-in-out;
   }
 
   .navbar-brand {
