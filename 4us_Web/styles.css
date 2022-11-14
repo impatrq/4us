@@ -67,6 +67,16 @@ body {
       font-size: 10rem;
     }
   }
+
+  .subtittle {
+    color: #386641;
+  }
+
+  .tittle {
+    color: #386641;
+  }
+
+
   .resumen__contenedor {
     display: flex;
     flex-direction: row;
@@ -81,6 +91,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    color: #386641;
   }
 
   .resumen_proyecto {
@@ -164,6 +175,11 @@ body {
   
   
   /*contact form*/
+
+  .contact_us {
+    padding: 100px;
+  }
+
   .contact_form{  
     width: 450px; 
     height: auto;

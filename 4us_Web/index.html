@@ -17,7 +17,7 @@
       <!-- Navbar -->
         <div id="navbar">
             <a href="#resumen">Inicio</a>
-            <a href="#quienes">Nosotros</a>
+            <a href="#nosotros">Nosotros</a>
             <a href="#contacto">Contacto</a>
           </div>
 
@@ -30,8 +30,8 @@
      <main>
   
        <div class="container">
-            <h1> Proyecto 4us </h1>
-            <h3> "Cuidar el planeta es cuidarnos" </h3>
+            <h1 class="tittle">Proyecto 4us </h1>
+            <h3 class= "subtittle"> Cuidar el planeta es cuidarnos </h3>
             <div class="resumen__contenedor">
               <div class="resumen_proyecto">
                 <h5 id="resumen"> Reciclar implica dejar de generar basura y reutilizar algo que sino tardaría años en 
@@ -62,7 +62,7 @@
           
           
       <div class="integrantes">
-          <h4 id="quienes"> ¿Quiénes somos? </h4>
+          <h4 id="nosotros" class="quienes"> ¿Quiénes somos? </h4>
             <h5> Somos un grupo de estudiantes del último
             año de la Escuela de Educación Técnica N°7 de Quilmes, 
             más conocida como IMPA. Durante todo el ciclo lectivo 2022 estuvimos realizando
@@ -99,10 +99,7 @@
             <div class="fotopier"> 
               <img scr="" alt="foto_pier" class="foto_alumno">
               <a href="https://www.linkedin.com/in/pierluigidn/" class="enlace_linkedin" target="_blank"> <img src="./LinkedIn logo-01.png" alt="linkedin" class="linkedin_alumno"> </a>
-            </div>
-
-            
-            <h5 id="contacto">Contactate con nosotros</h5> 
+            </div> 
         </div>
     
   
@@ -110,38 +107,39 @@
     </main>
 
      <!-- FORM -->
-     <img scr="4us_Web\chicos reciclando.jpg">
-    <div class="contact_form">
 
-      <div class="formulario">      
-        <h1 class="formtittle">Formulario de contacto</h1>
-          <h3 class="formsub">Escríbenos y en breve nos pondremos en contacto</h3>
-  
-  
-            <form action="submeter-formulario.php" method="post">       
-  
-              
-                  <p id="textform">
-                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Nombre">
-                  </p>
+    <h5 id="contacto" class="contact_us">Contactate con nosotros</h5>
+      <div class="contact_form">
+
+        <div class="formulario">      
+          <h1 class="formtittle">Formulario de contacto</h1>
+            <h3 class="formsub">Escríbenos y en breve nos pondremos en contacto</h3>
+    
+    
+              <form action="submeter-formulario.php" method="post">       
+    
                 
-                  <p>
-                    <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Mail">
-                  </p>   
+                    <p id="textform">
+                      <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Nombre">
+                    </p>
+                  
+                    <p>
+                      <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Mail">
+                    </p>   
+                  
+                    <p>
+                      <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                    </p>                    
+                  
+                    <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+    
+                    <p class="aviso">
+                      <span class="obligatorio"> * </span>los campos son obligatorios.
+                    </p>          
                 
-                  <p>
-                    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
-                  </p>                    
-                
-                  <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
-  
-                  <p class="aviso">
-                    <span class="obligatorio"> * </span>los campos son obligatorios.
-                  </p>          
-              
-            </form>
-      </div>  
-    </div>
+              </form>
+        </div>  
+      </div>
 <!-- END OF FORm -->
 
 <footer class="text-center footer-style">
