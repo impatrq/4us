@@ -97,7 +97,7 @@ def limpiadora_general(a_limpiar,noise_flr):
                     if limpio != []:
                         filtrado = filtrado + limpio
                         filtrado = [*set(filtrado)]
-                        print("filtrado vale: ",filtrado,"con nombre ",nom)
+                        print("fil trado vale: ",filtrado,"con nombre ",nom)
     finales.append([limpio, nom])
     if filtrado != []:
         if is_pressed("m"):
@@ -122,7 +122,8 @@ def noise_floor(cicles):
     for one in range(cicles):
         crntnoise = cola.get()
         crntnoise = crntnoise[1]
-        noise_lvl.append(crntnoise)
+        if crntnoise <= 200:
+            noise_lvl.append(crntnoise)
     print("Valores de ruido: ",noise_lvl)
     noise_flr = sum(noise_lvl)/len(noise_lvl)
     print("Valor promedio de ruido: ",noise_flr)
