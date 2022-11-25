@@ -1,0 +1,334 @@
+body {
+    height: 400px;
+    background-image: ("./fondo 4us web_Mesa de trabajo 1.jpg");
+    background-size: cover;
+    background-repeat:repeat;
+    background-position: center center; 
+  }
+  
+  /* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #386641;
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+  @media (max-width: 450px) {
+    #intro {
+      height: 950px !important;
+    }
+  }
+  
+  @media (min-width: 550px) and (max-width: 750px) {
+    #intro {
+      height: 1100px !important;
+    }
+  }
+  
+  @media (min-width: 800px) and (max-width: 990px) {
+    #intro {
+      height: 600px !important;
+    }
+  }
+  
+  .display-1 {
+    font-weight: 500 !important;
+    letter-spacing: 40px;
+  }
+  
+  @media (min-width: 1600px) {
+    .display-1 {
+      font-size: 10rem;
+    }
+  }
+
+  .subtittle {
+    color: #386641;
+  }
+
+  .tittle {
+    color: #386641;
+  }
+
+
+  .resumen__contenedor {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .integrantes {
+    padding: 100px;
+  }
+
+  .quienes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: #386641;
+  }
+
+  .resumen_proyecto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+ 
+  .tacho3d {
+    display: block;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .foto_alumno {
+    width: 150px;
+    height: 150px;
+  }
+
+
+  .linkedin_alumno {
+    height: 50px;
+    width: 130px;
+    transition: all .4s ease-in-out;
+  }
+
+  .navbar-brand {
+      color: #ffffff;
+  }
+  
+  img {
+      height: 500px;
+  }
+  
+  #logo {
+    height: 50px;
+  }
+  
+  html, body {
+      margin:0;
+      padding:0;
+      height:100%;
+    }
+    
+  #pagina {
+      position: relative;
+      min-height: 100%;
+    }
+    
+  #contenido {
+      padding-bottom:100px; /* este valor debe ser igual o mayor al alto del pie */
+    }
+    
+  /* footer */
+
+  .footer-style {
+    padding-top: 50px;
+    background-color: #386641;
+  }
+  footer {
+  color: white;
+  }
+  footer h3 {
+  margin-bottom: 30px;
+  font-weight: 800;
+  }
+  footer .footer-above {
+  padding-top: 50px;
+  background-color: green;
+  }
+  footer .footer-col {
+  margin-bottom: 50px;
+  }
+  footer .footer-below {
+  padding: 25px;
+  background-color: green;
+  }
+
+  .buttons {
+    min-width: 200px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .buttons a {
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: white;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+  }
+
+  .buttons a:hover {
+    transform: scale(1.2);
+  }
+  /*end footer*/
+
+  
+  
+  /*contact form*/
+
+  .contact_us {
+    padding: 100px;
+  }
+
+  .contact_form{  
+    width: 450px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    background-color: none; 
+    padding-left: 30px; 
+  }
+    
+  
+  input{
+    background-color: #A8C957; 
+    width: 408px; 
+    height: 60px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #A8C957; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+  }
+  
+  
+  textarea{
+    background-color: #A8C957; 
+    width: 405px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #A8C957; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    padding-top: 15px; 
+  }
+  
+  
+  label{
+    display: block; 
+    float: center;  
+  }
+  
+  
+  button{
+    height: 45px; 
+    padding-left: 5px;
+    padding-right: 5px;   
+    margin-bottom: 20px; 
+    margin-top: 10px;   
+    text-transform: uppercase;
+    background-color: #A8C957; 
+    border-color: #A8C957; 
+    border-style: solid; 
+    border-radius: 10px;  
+    width: 420px;   
+    cursor: pointer;
+  }
+    
+  
+  button p{
+    color: #637933; 
+  }
+  
+  
+  span{
+    color: #A8C957; 
+  }
+  
+  
+  .aviso{
+    font-size: 13px;  
+    color: #0e0e0e;  
+  }
+    
+  
+  .formtittle{
+    font-size: 39px;  
+    text-align: letf; 
+    padding-bottom: 20px; 
+    color: #386641;
+  }
+    
+  
+  .formsub{
+    font-size: 16px; 
+    padding-bottom: 30px;
+    color: #386641;   
+  }
+  
+  
+  .textform{
+    font-size: 14px; 
+    color: #386641; 
+  }
+  
+  
+  ::-webkit-input-placeholder {
+   color: #637933;
+  }
+    
+  
+  ::-webkit-textarea-placeholder {
+   color: #637933;
+  }
+  
+  
+  .formulario input:focus{
+    outline:0;
+    border: 1px solid #637933;
+  }
+  
+  
+  .formulario textarea:focus{
+    outline:0;
+    border: 1px solid #637933;
+  }
+   /*end of contact form*/
+
+   
+
+
+  
