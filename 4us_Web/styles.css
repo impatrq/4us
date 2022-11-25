@@ -169,7 +169,7 @@ body {
   margin-bottom: 50px;
   }
   footer .footer-below {
-  padding: 25px 0;
+  padding: 25px;
   background-color: green;
   }
 
@@ -327,3 +327,8 @@ body {
     border: 1px solid #637933;
   }
    /*end of contact form*/
+
+   
+
+
+  
