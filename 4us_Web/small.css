@@ -1,0 +1,39 @@
+@media (max-width:500px) {
+  .tacho3d{
+    display: none;
+  }
+
+  #navbar {
+    width: 500px;
+  }
+
+  .tittle{
+    font-size: 50px;
+  }
+
+  .subtittle{
+    margin-bottom: 40px;
+  }
+
+  .integrantes{
+    padding: 1%;
+  }
+
+  h4{
+    margin-top: 40px;
+    padding: 1%;
+  }
+
+  .contact_us{
+    padding: 1px;
+    margin-top: 40px;
+  }
+
+  .contact_form{
+    margin-top: 1px;
+  }
+
+  .footer-style{
+    width: 480px;
+  }
+}  
