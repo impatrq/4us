@@ -55,4 +55,16 @@
 
 ## titulo lista integrantes 
 
+Aranda, Federico
+Cuccaro, Juan
+Cenyko, Ivan
+Dalle Nogare, Pierluigi
+De Godoy, Máximo
+González, Mariano
+Guyot, Ivan
+Litteri, Santiago
+Martinez, Celeste
+Romero, Camila
+
+
 ## esponsor cami
