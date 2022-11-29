@@ -3,7 +3,7 @@
 ![](./_4us_Logo.jpg)
 #### 4us busca, a traves de su diseño innovador inculcar el reciclaje a los más chicos de manera divertida y asi disminuir la cantidad de basura que se genera por día en nuestro país
 
-## ¿que es 4us? 
+## ¿Que es 4us? 
 ## Es un cesto de residuos reciclables inteligente, el cual, de una forma dicertida y amigable va a inculcar la importancua del reciclaje en nuestra vida diaria a los mas chicos. 
 
 ## ¿Como funciona?
