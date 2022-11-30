@@ -56,8 +56,6 @@
 ## Lista integrantes 
 
 ####  Aranda, Federico
-####  Cuccaro, Juan
-####  Cenyko, Ivan
 ####  Dalle Nogare, Pierluigi
 ####  De Godoy, Máximo
 ####  González, Mariano
