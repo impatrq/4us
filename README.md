@@ -65,6 +65,8 @@
 ####  Litteri, Santiago
 ####  Martinez, Celeste
 ####  Romero, Camila
+![image](https://user-images.githubusercontent.com/103277938/204871554-b91ae2cb-19ed-493a-8c44-138090f13ec2.png)
+
 
 
 ## esponsor cami
