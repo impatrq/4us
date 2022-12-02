@@ -14,10 +14,11 @@
   
   | + info |
   | ----------- |
-(https://linktr.ee/proyecto4us?utm_source=linktree_profile_share)
+https://linktr.ee/proyecto4us?utm_source=linktree_profile_share
   
   
 
+  
 </div>
 
 ## ¿Qué es 4us y qué busca? 
