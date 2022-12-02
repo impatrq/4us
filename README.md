@@ -1,6 +1,15 @@
 
 # 4us, el tacho de reciclaje inteligente 
 ![](./_4us_Logo.jpg)
+
+|  Instagram  |
+| ----------- |
+|[@Proyecto_4us](https://www.instagram.com/Proyecto_4us)|
+
+&nbsp;
+
+</div>
+
 ## 4us busca, a traves de su diseño innovador inculcar el reciclaje a los más chicos de manera divertida y asi disminuir la cantidad de basura que se genera por día en nuestro país
 
 ## ¿Qué es 4us? 
