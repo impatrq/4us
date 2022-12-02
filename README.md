@@ -72,7 +72,7 @@ Se pueden contactar a través de nuestro instagram.
 O tambien por Linkedin 
 
 
- Camila Romero 
+| Camila Romero |
 |-------------------|
 https://www.linkedin.com/in/camilaromero23
 
