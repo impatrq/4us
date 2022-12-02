@@ -30,7 +30,7 @@ Somos un grupo de estudiantes de la escuela tecnica N°7 (IMPA) orientados en la
 
 Somos un grupo de alumnos de la escuela E.E.S.T. N°7 "taller regional quilmes" IMPA.
 
-Integrantes:
+### Integrantes:
 
 #### Aranda Federico:
 --> Mail: federiconehuenaranda@impatrq.com
