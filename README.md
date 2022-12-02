@@ -13,6 +13,7 @@
 &nbsp;
   
   | + info |
+  | ----------- |
 (https://linktr.ee/proyecto4us?utm_source=linktree_profile_share)
   
   
