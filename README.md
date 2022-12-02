@@ -55,10 +55,9 @@ Somos un grupo de estudiantes de la escuela tecnica N°7 (IMPA) orientados en la
 #### Romero Camila:
 --> Mail: camilalisetteromero@impatrq.com
 
-<div align="center">
-
 ## ¿Cómo contactarnos? 
 Se pueden contactar a través de nuestro instagram.
+[@Proyecto_4us](https://www.instagram.com/Proyecto_4us)
 
 <img src="https://user-images.githubusercontent.com/103277938/204871554-b91ae2cb-19ed-493a-8c44-138090f13ec2.png" width="450"/>
 
