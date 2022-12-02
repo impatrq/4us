@@ -2,7 +2,7 @@
 
 # 4us, el tacho de reciclaje inteligente
 
-<img src="https://github.com/impatrq/4us/blob/f265eab5edb35ead9f11398bbf3d8ad37b8fc687/_4us_Logo.jpg" height="400" width="400" />
+<img src="https://github.com/impatrq/4us/blob/f265eab5edb35ead9f11398bbf3d8ad37b8fc687/_4us_Logo.jpg" width="400" />
 
 &nbsp;
 
