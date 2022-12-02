@@ -5,7 +5,7 @@
 |  Instagram  |
 | ----------- |
 
-|[@Proyecto_4us](https://www.instagram.com/Proyecto_4us)|
+[@Proyecto_4us](https://www.instagram.com/Proyecto_4us)
 
 &nbsp;
 
