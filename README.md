@@ -3,7 +3,6 @@
 # 4us, el tacho de reciclaje inteligente
 ![](./_4us_Logo.jpg) 
 
-<height="400" width="400"/>
 
 <div align="center">
 
