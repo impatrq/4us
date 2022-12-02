@@ -4,15 +4,13 @@
 ![](./_4us_Logo.jpg)
 
 <div align="center">
-[
-|  Instagram  |
+
+[|  Instagram  |
 | ----------- |
 
 [@Proyecto_4us](https://www.instagram.com/Proyecto_4us)
 
-&nbsp;
-
-]
+&nbsp;]
 
 </div>
 
