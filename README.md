@@ -12,6 +12,8 @@
 
 &nbsp;
 
+<div/>
+
 ## ¿Qué es 4us y qué busca? 
 4us es un cesto de residuos reciclables inteligente, el cual, busca a través de su diseño innovador hacer de una forma divertida y amigable el inculcarles la importancia del reciclaje a los mas chicos y así disminuir la cantidad de basura generada por día en nuestro país. 
 
