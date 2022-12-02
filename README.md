@@ -61,24 +61,35 @@ Somos un grupo de estudiantes de la escuela tecnica N°7 (IMPA) orientados en la
 
 #### Romero Camila:
 --> Mail: camilalisetteromero@impatrq.com
+
+
 <img src="https://user-images.githubusercontent.com/103277938/204871554-b91ae2cb-19ed-493a-8c44-138090f13ec2.png" width="400" />
 
 ## ¿Cómo contactarnos? 
 Se pueden contactar a través de nuestro instagram.
 [@Proyecto_4us](https://www.instagram.com/Proyecto_4us)
+
 O tambien por Linkedin 
+
+
 Camila Romero 
 https://www.linkedin.com/in/camilaromero23
+
 Federico Aranda
 https://www.linkedin.com/in/federico-aranda-27615a239
+
 Pierluigi Dalle Nogare
 https://www.linkedin.com/in/pierluigidn
+
 Maximo De Godoy 
 https://www.linkedin.com/in/maximo-de-godoy-2124bb22a
+
 Santiago Litteri
 https://www.linkedin.com/in/santiago-litteri-97432a142
+
 Mariano Gonzalez
 https://www.linkedin.com/in/mariano-iv%C3%A1n-gonz%C3%A1lez-66828a239
+
 Ivan Guyot
 https://www.linkedin.com/in/ivan-guyot-8a13a7236
 
