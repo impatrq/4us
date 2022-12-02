@@ -1,12 +1,13 @@
 <div align="center">
 
 # 4us, el tacho de reciclaje inteligente
-![](./_4us_Logo.jpg) 
 
+<img src="https://github.com/impatrq/4us/blob/f265eab5edb35ead9f11398bbf3d8ad37b8fc687/_4us_Logo.jpg" height="400" width="400" />
+
+&nbsp;
 
 |  Instagram  |
 | ----------- |
-
 [@Proyecto_4us](https://www.instagram.com/Proyecto_4us)
 
 &nbsp;
