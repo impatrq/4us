@@ -17,18 +17,14 @@
 ## ¿Cómo funciona?
 El proyecto funcionará de la siguiente manera: podrá separar tanto madera y derivados, como plásticos, envoltorios o metales. El niño que utilice 4us tirará la basura en el tacho, indicando la clasificación de la basura. Esto lo conseguirá pulsando uno de los cuatro botones disponibles,(cada uno correspondiendo a los cuatro tipos de resiuduos antes nombrados). Dicho residuo será sensado y confirmará si corresponde con la categoría que marcó el niño. Si coincide, irá a su contenedor correspondiente de forma automática y lo felicitará a través de un display; de lo contrario, será devuelto al usuario para que lo intente nuevamente.
 
-## ¿Quiénes lo desarrollan?
-Somos un grupo de estudiantes de la escuela tecnica N°7 (IMPA) orientados en la electronica interesados en el reciclaje y en la visibilidad de este.
-
 ## ¿Dónde utilizarlo?
-4US se usara en escuelas y hospitales donde la creatividad y el aprendizaje de los niños y niñas abunda. Tambien, por su sistema de deteccion de residuos, puede ser usado en aeropuertos, fabricas, oficinas, etc.
+4US se usará en escuelas y hospitales donde la creatividad y el aprendizaje de los niños y niñas abunda. También, por su sistema de detección de residuos, puede ser usado en aeropuertos, fábricas, oficinas, etc.
 
 ## ¿Por qué utilizarlo?
-4us es un proyecto diseñado para ayudar al medio ambiente a traves del reciclaje. El objetivo es inculcarles a los chicos que el reciclaje es muy importante en nuestra vida diaria y lo importante que es cuidar el medio ambiente porque de ello depende nuestra salud y nuestra vida. 
+4us es un proyecto diseñado para ayudar al medio ambiente a través del reciclaje. El objetivo es inculcarles a los chicos que el reciclaje es muy importante en nuestra vida diaria y lo importante que es cuidar el medio ambiente porque de ello depende nuestra salud y nuestra vida. 
 
 ## ¿Quiénes somos?
-
-Somos un grupo de alumnos de la escuela E.E.S.T. N°7 "taller regional quilmes" IMPA.
+Somos un grupo de estudiantes de la escuela tecnica N°7 (IMPA) orientados en la electrónica interesados en el reciclaje y en la visibilidad de este.
 
 ### Integrantes:
 
