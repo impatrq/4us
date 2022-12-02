@@ -72,29 +72,36 @@ Se pueden contactar a través de nuestro instagram.
 O tambien por Linkedin 
 
 
-Camila Romero 
+| Camila Romero |
+|-------------------|
 https://www.linkedin.com/in/camilaromero23
 
-Federico Aranda
+| Federico Aranda |
+|-------------------|
 https://www.linkedin.com/in/federico-aranda-27615a239
 
-Pierluigi Dalle Nogare
+| Pierluigi Dalle Nogare |
+|-------------------|
 https://www.linkedin.com/in/pierluigidn
 
-Maximo De Godoy 
+| Maximo De Godoy |
+|-------------------|
 https://www.linkedin.com/in/maximo-de-godoy-2124bb22a
 
-Santiago Litteri
+| Santiago Litteri |
+|-------------------|
 https://www.linkedin.com/in/santiago-litteri-97432a142
 
 | Mariano Gonzalez |
 |-------------------|
 https://www.linkedin.com/in/mariano-iv%C3%A1n-gonz%C3%A1lez-66828a239
 
-Ivan Guyot
+| Ivan Guyot |
+|-------------------|
 https://www.linkedin.com/in/ivan-guyot-8a13a7236
 
-Martinez celeste
+| Martinez celeste |
+|-------------------|
 https://www.linkedin.com/in/celeste-martinez-revelli-9b24aa23b
 
 &nbsp;
