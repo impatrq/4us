@@ -87,7 +87,8 @@ https://www.linkedin.com/in/maximo-de-godoy-2124bb22a
 Santiago Litteri
 https://www.linkedin.com/in/santiago-litteri-97432a142
 
-Mariano Gonzalez
+| Mariano Gonzalez |
+|-------------------|
 https://www.linkedin.com/in/mariano-iv%C3%A1n-gonz%C3%A1lez-66828a239
 
 Ivan Guyot
