@@ -9,9 +9,6 @@
 |  Instagram  |
 | ----------- |
 [@Proyecto_4us](https://www.instagram.com/Proyecto_4us)
-  |  Mas info  |
-  | ----------- |
-(https://linktr.ee/proyecto4us?fbclid=PAAaYCdQrO2udvZ6PTD_WhCROk_scu1XG3xkoD64EIrdyX7C5pLEpkYsSmD8Q)
   
 &nbsp;
 
