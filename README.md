@@ -30,51 +30,35 @@ Somos un grupo de estudiantes de la escuela tecnica N°7 (IMPA) orientados en la
 
 Somos un grupo de alumnos de la escuela E.E.S.T. N°7 "taller regional quilmes" IMPA.
 
+Integrantes:
+
 #### Aranda Federico:
---> ● Instagram: @fedearanda_04
---> ● Mail: federiconehuenaranda@impatrq.com
+--> Mail: federiconehuenaranda@impatrq.com
 
 #### Dalle Nogare Pierluigi:
---> ● Instagram: @pierelcapo
---> ● Mail: pierluigidallenogare@impatrq.com
+--> Mail: pierluigidallenogare@impatrq.com
 
 #### De Godoy Máximo:
---> ● Instagram: @maxidg01
---> ● Mail: maximodegodoy@impatrq.com
+--> Mail: maximodegodoy@impatrq.com
 
 #### González Mariano:
---> ● Instagram: @mariano_.gonzalez
---> ● Mail: marianoivangonzalez@impatrq.com
+--> Mail: marianoivangonzalez@impatrq.com
 
 #### Guyot Ivan:
---> ● Instagram: @guyotivan
---> ● Mail: ivanjavierguyot@impatrq.com
+--> Mail: ivanjavierguyot@impatrq.com
 
 #### Litteri Santiago:
---> ● Instagram: @santitteri
---> ● Mail: santiagolitteri@impatrq.com
+--> Mail: santiagolitteri@impatrq.com
 
 #### Martinez Celeste:
---> ● Instagram: @celees.mr
---> ● Mail: celestemartinezrevelli@impatrq.com
+--> Mail: celestemartinezrevelli@impatrq.com
 
 #### Romero Camila:
---> ● Instagram: @caamii.romero
---> ● Mail: camilalisetteromero@impatrq.com
+--> Mail: camilalisetteromero@impatrq.com
 
 ## ¿Cómo contactarnos? 
 Se pueden contactar a través de nuestro instagram.
 
-## Lista integrantes 
-
-####  Aranda, Federico
-####  Dalle Nogare, Pierluigi
-####  De Godoy, Máximo
-####  González, Mariano
-####  Guyot, Ivan
-####  Litteri, Santiago
-####  Martinez, Celeste
-####  Romero, Camila
 ![image](https://user-images.githubusercontent.com/103277938/204871554-b91ae2cb-19ed-493a-8c44-138090f13ec2.png)
 
 
