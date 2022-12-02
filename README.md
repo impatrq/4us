@@ -4,8 +4,6 @@
 ![](./_4us_Logo.jpg) 
 
 
-<div align="center">
-
 |  Instagram  |
 | ----------- |
 
