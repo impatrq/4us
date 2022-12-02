@@ -9,9 +9,10 @@
 |  Instagram  |
 | ----------- |
 [@Proyecto_4us](https://www.instagram.com/Proyecto_4us) 
+  
 &nbsp;
+  
   | + info |
-| ----------- |
 (https://linktr.ee/proyecto4us?utm_source=linktree_profile_share)
   
   
