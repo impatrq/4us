@@ -74,23 +74,23 @@ O tambien por Linkedin
 
 | Camila Romero |
 |-------------------|
-https://www.linkedin.com/in/camilaromero23
+[linkedin](https://www.linkedin.com/in/camilaromero23)
 
 | Federico Aranda |
 |-------------------|
-https://www.linkedin.com/in/federico-aranda-27615a239
+[linkedin](https://www.linkedin.com/in/federico-aranda-27615a239)
 
 | Pierluigi Dalle Nogare |
 |-------------------|
-https://www.linkedin.com/in/pierluigidn
+[linkedin](https://www.linkedin.com/in/pierluigidn)
 
 | Maximo De Godoy |
 |-------------------|
-https://www.linkedin.com/in/maximo-de-godoy-2124bb22a
+[linkedin](https://www.linkedin.com/in/maximo-de-godoy-2124bb22a)
 
 | Santiago Litteri |
 |-------------------|
-https://www.linkedin.com/in/santiago-litteri-97432a142
+[linkedin](https://www.linkedin.com/in/santiago-litteri-97432a142)
 
 | Mariano Gonzalez |
 |-------------------|
@@ -98,10 +98,10 @@ https://www.linkedin.com/in/santiago-litteri-97432a142
 
 | Ivan Guyot |
 |-------------------|
-https://www.linkedin.com/in/ivan-guyot-8a13a7236
+[linkedin](https://www.linkedin.com/in/ivan-guyot-8a13a7236)
 
 | Martinez celeste |
 |-------------------|
-https://www.linkedin.com/in/celeste-martinez-revelli-9b24aa23b
+[linkedin](https://www.linkedin.com/in/celeste-martinez-revelli-9b24aa23b)
 
 &nbsp;
