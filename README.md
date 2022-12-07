@@ -76,7 +76,7 @@ Email de contacto.
 [grupon4us@gmail.com](grupon4us@gmail.com)
 
 Nuestro Linkedin.
-[[Linkedin](https://www.linkedin.com/company/proyecto-4us/?viewAsMember=true)](https://www.linkedin.com/company/proyecto-4us/?viewAsMember=true)
+[https://www.linkedin.com/company/proyecto-4us/?viewAsMember=true](https://www.linkedin.com/company/proyecto-4us/?viewAsMember=true)
 
 O tambien por Linkedin a cada integrante
 
