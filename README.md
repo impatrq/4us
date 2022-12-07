@@ -70,7 +70,7 @@ Se pueden contactar a través de nuestro instagram.
 [@Proyecto_4us](https://www.instagram.com/Proyecto_4us)
 
 Nuestra pagina web.
-[Pagina Web](https://linktr.ee/proyecto4us?utm_source=linktree_profile_share)
+[https://linktr.ee/proyecto4us?utm_source=linktree_profile_share](https://linktr.ee/proyecto4us?utm_source=linktree_profile_share)
 
 Email de contacto.
 [grupon4us@gmail.com](grupon4us@gmail.com)
