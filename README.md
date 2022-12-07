@@ -69,7 +69,7 @@ https://linktr.ee/proyecto4us?utm_source=linktree_profile_share
 Se pueden contactar a través de nuestro instagram.
 [@Proyecto_4us](https://www.instagram.com/Proyecto_4us)
 Pagina Web.
-[Pagina Web]([linktr.ee/proyecto4us](https://linktr.ee/proyecto4us?utm_source=linktree_profile_share))
+[Pagina Web](https://linktr.ee/proyecto4us?utm_source=linktree_profile_share))
 Email.
 [Email](grupon4us@gmail.com)
 
