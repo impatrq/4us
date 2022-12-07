@@ -71,12 +71,12 @@ Se pueden contactar a través de nuestro instagram.
 
 Nuestra pagina web.
 [Pagina Web](https://linktr.ee/proyecto4us?utm_source=linktree_profile_share)
-Email de contacto.
 
-[Email](grupon4us@gmail.com)
+Email de contacto.
+[grupon4us@gmail.com](grupon4us@gmail.com)
 
 Nuestro Linkedin.
-[Linkedin](https://www.linkedin.com/company/proyecto-4us/?viewAsMember=true)
+[[Linkedin](https://www.linkedin.com/company/proyecto-4us/?viewAsMember=true)](https://www.linkedin.com/company/proyecto-4us/?viewAsMember=true)
 
 O tambien por Linkedin a cada integrante
 
