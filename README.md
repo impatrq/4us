@@ -68,11 +68,11 @@ https://linktr.ee/proyecto4us?utm_source=linktree_profile_share
 ## ¿Cómo contactarnos? 
 Se pueden contactar a través de nuestro instagram.
 [@Proyecto_4us](https://www.instagram.com/Proyecto_4us)
-Pagina Web.
+Nuestra pagina web.
 [Pagina Web](https://linktr.ee/proyecto4us?utm_source=linktree_profile_share)
-Email.
+Email de contacto.
 [Email](grupon4us@gmail.com)
-Linkedin
+Nuestro Linkedin.
 [Linkedin](https://www.linkedin.com/company/proyecto-4us/?viewAsMember=true)
 
 O tambien por Linkedin a cada integrante
