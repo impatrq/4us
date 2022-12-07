@@ -69,11 +69,13 @@ https://linktr.ee/proyecto4us?utm_source=linktree_profile_share
 Se pueden contactar a través de nuestro instagram.
 [@Proyecto_4us](https://www.instagram.com/Proyecto_4us)
 Pagina Web.
-[Pagina Web](https://linktr.ee/proyecto4us?utm_source=linktree_profile_share))
+[Pagina Web](https://linktr.ee/proyecto4us?utm_source=linktree_profile_share)
 Email.
 [Email](grupon4us@gmail.com)
+Linkedin
+[Linkedin](https://www.linkedin.com/company/proyecto-4us/?viewAsMember=true)
 
-O tambien por Linkedin 
+O tambien por Linkedin a cada integrante
 
 
 | Camila Romero |
